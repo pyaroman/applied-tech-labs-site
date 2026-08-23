@@ -19,7 +19,7 @@ body {
   color: var(--ink);
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 a {
@@ -33,7 +33,7 @@ a {
 }
 
 .header {
-  height: 82px;
+  height: 68px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -85,11 +85,11 @@ nav a,
 }
 
 .hero {
-  min-height: 590px;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 80px 0 64px;
+  padding: 48px 0 42px;
 }
 
 h1,
@@ -100,8 +100,8 @@ p {
 }
 
 h1 {
-  margin-bottom: 42px;
-  font-size: clamp(54px, 7vw, 86px);
+  margin-bottom: 28px;
+  font-size: clamp(50px, 6.4vw, 78px);
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: -0.055em;
@@ -110,9 +110,9 @@ h1 {
 .hero-bottom {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
-  padding-top: 28px;
+  padding-top: 20px;
   border-top: 1px solid var(--line);
 }
 
@@ -134,20 +134,20 @@ h1 {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 64px 0;
   border-top: 1px solid var(--line);
 }
 
 .label {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 h2 {
-  margin-bottom: 46px;
-  font-size: clamp(44px, 6vw, 70px);
+  margin-bottom: 30px;
+  font-size: clamp(40px, 5.2vw, 62px);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.05em;
@@ -156,14 +156,14 @@ h2 {
 .two-column {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: 96px;
-  padding-top: 28px;
+  gap: 64px;
+  padding-top: 20px;
   border-top: 1px solid var(--line);
 }
 
 .lead {
   margin-bottom: 0;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 1.35;
   letter-spacing: -0.025em;
 }
@@ -184,7 +184,7 @@ h2 {
   display: grid;
   grid-template-columns: 60px 0.8fr 1.2fr;
   gap: 28px;
-  padding: 34px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -221,10 +221,10 @@ h2 {
 }
 
 .reasons article {
-  min-height: 230px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 20px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -235,7 +235,7 @@ h2 {
 }
 
 .contact {
-  padding: 100px 0 110px;
+  padding: 68px 0 76px;
   background: var(--ink);
   color: var(--white);
 }
@@ -253,7 +253,7 @@ h2 {
 }
 
 footer {
-  padding: 28px 0;
+  padding: 20px 0;
   background: var(--ink);
   color: #bfc2c6;
   border-top: 1px solid #383c42;
@@ -313,8 +313,8 @@ footer {
   }
 
   .hero {
-    min-height: 610px;
-    padding-bottom: 44px;
+    min-height: 500px;
+    padding: 44px 0 34px;
   }
 
   h1 {
@@ -331,7 +331,7 @@ footer {
   }
 
   .section {
-    padding: 74px 0;
+    padding: 52px 0;
   }
 
   .lead {
@@ -343,10 +343,10 @@ footer {
   }
 
   .reasons article {
-    min-height: 190px;
+    min-height: 160px;
   }
 
   .contact {
-    padding: 76px 0 84px;
+    padding: 56px 0 62px;
   }
 }
