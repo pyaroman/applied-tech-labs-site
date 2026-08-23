@@ -1,51 +1,51 @@
-const outcomes = [
+const differences = [
   {
     number: "01",
-    title: "Cleaner handoffs",
-    copy: "Keep work moving between people, teams, and tools without the usual follow-up loop.",
+    title: "More than automation",
+    copy: "We study how information, decisions, and work travel across the company—not only the task in front of us. The result is faster knowledge-sharing, fewer repeated questions, and one stronger operation instead of isolated automations.",
   },
   {
     number: "02",
-    title: "Less manual work",
-    copy: "Remove repetitive coordination, data entry, and reporting from your team’s day.",
+    title: "Built around your people",
+    copy: "Systems are shaped with the people who will use them, not designed in isolation and handed over at the end.",
   },
   {
     number: "03",
-    title: "Faster decisions",
-    copy: "Bring the right context forward so decisions happen with less searching and fewer meetings.",
+    title: "The right solution for each problem",
+    copy: "We separate work that benefits from AI, simpler automation, process repair, or human judgment so every problem gets the right response.",
   },
   {
     number: "04",
-    title: "More capacity",
-    copy: "Give your best people room for customer work, judgment calls, and the work that grows the business.",
+    title: "Works inside your existing workflow",
+    copy: "Whenever possible, the capability lives inside the tools and workflows your team already uses. Fewer new dashboards and a smaller adoption burden.",
   },
   {
     number: "05",
-    title: "Connected systems",
-    copy: "Make the software you already use behave like one coherent operating system.",
+    title: "You own it. Built to evolve.",
+    copy: "Your data, workflows, operating knowledge, and system foundation stay with your company. A vendor-agnostic design lets the system evolve as better technology appears without rebuilding from zero.",
   },
   {
     number: "06",
-    title: "Visible performance",
-    copy: "Build measurement into the workflow so gains are clear, durable, and easy to improve.",
+    title: "Governed from day one",
+    copy: "Security, permissions, auditability, human review, evaluation, and cost controls are designed into every implementation from the start.",
   },
 ];
 
 const process = [
   {
     number: "01",
-    title: "Map the operation",
-    copy: "We listen to the people closest to the work, trace how information moves, and identify where time, context, and momentum get lost.",
+    title: "Understand the business",
+    copy: "Before anything is built, we speak with key stakeholders and the people closest to the work. We map responsibilities, tools, workflows, and bottlenecks so the effort stays focused on measurable business impact.",
   },
   {
     number: "02",
-    title: "Design the system",
-    copy: "We prioritize the highest-leverage opportunity and shape a practical system around your tools, constraints, and team—not the other way around.",
+    title: "Design & build the system",
+    copy: "We identify the highest-impact opportunities and decide whether the right response is AI, automation, process improvement, better software, or a combination. The people who will use the system help design and test it inside the real operation.",
   },
   {
     number: "03",
-    title: "Prove the value",
-    copy: "We launch against a defined operational measure, support adoption, and refine until the new way of working holds up in the real world.",
+    title: "Prove & improve",
+    copy: "We measure adoption and operational impact, refine the system in use, and establish the safeguards and governance required for dependable long-term performance.",
   },
 ];
 
@@ -74,9 +74,9 @@ export default function Home() {
         <Brand />
 
         <nav aria-label="Primary navigation">
-          <a href="#approach">Approach</a>
-          <a href="#process">Process</a>
-          <a href="#outcomes">Outcomes</a>
+          <a href="#approach">Our philosophy</a>
+          <a href="#process">How we work</a>
+          <a href="#difference">Why ATL</a>
         </nav>
 
         <a className="button button-small button-outline" href="#contact">
@@ -117,7 +117,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#contact">
-              Book an operations review <span aria-hidden="true">↗</span>
+              Book a free discovery call <span aria-hidden="true">↗</span>
             </a>
             <a className="text-link" href="#process">
               See how we work <span aria-hidden="true">↓</span>
@@ -126,46 +126,46 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="ticker" aria-label="Focus areas">
-        <div>
-          <span>Less rework</span><b>·</b>
-          <span>Faster handoffs</span><b>·</b>
-          <span>Clearer decisions</span><b>·</b>
-          <span>More team capacity</span><b>·</b>
-          <span>Systems that fit the work</span>
-        </div>
-      </div>
-
       <section className="section section-light" id="approach" aria-labelledby="approach-title">
         <div className="shell">
           <div className="section-kicker">
-            <span>Our approach</span>
+            <span>Our philosophy</span>
             <span className="kicker-line" />
           </div>
-          <h2 id="approach-title">Start with the work.</h2>
+          <h2 id="approach-title">Build around people.</h2>
 
           <div className="editorial-grid">
             <p className="lead-copy">
-              Complexity is rarely one big problem. It is a hundred small
-              frictions quietly consuming your team’s time.
+              Your team sees the operation, the customer, and the judgment
+              calls with a clarity no outside system can match. That is why
+              every engagement begins with the people doing the work—and the
+              outcomes they need to improve.
             </p>
             <div className="body-copy">
               <p>
-                A report rebuilt every Monday. Customer context split across
-                four tools. Approvals that stall because nobody knows what
-                happens next. Each issue looks minor on its own; together they
-                constrain the whole business.
+                Many technology projects begin with a tool and go looking for a
+                reason to use it. That is how low-value tasks get polished while
+                the constraint that actually holds the business back remains
+                untouched.
               </p>
               <p>
-                We study the operation as a connected system—people, process,
-                data, and software—then redesign the parts creating the most
-                waste.
+                The result is more software, more steps, and less capacity. We
+                begin with the operation itself.
               </p>
               <p>
-                Sometimes the answer is automation. Sometimes it is a better
-                workflow, a focused AI capability, or a simpler decision path.
-                The goal is always the same: make the work move with less
-                effort and more control.
+                We trace how people, data, software, equipment, and processes
+                work together. With your team, we find the points creating the
+                most friction and determine whether the answer is AI,
+                automation, a better process, or a combination.
+              </p>
+              <p>
+                When technology belongs, we fit it around the operation. That
+                may mean connecting tools already in use, simplifying an
+                existing workflow, or building something focused and new.
+              </p>
+              <p>
+                The standard is simple: less complexity, greater capacity, and
+                as little disruption as possible.
               </p>
             </div>
           </div>
@@ -179,7 +179,6 @@ export default function Home() {
               <span>How we work</span>
               <span className="kicker-line" />
             </div>
-            <p>One operating problem. One measurable outcome. One clear path forward.</p>
           </div>
           <h2 id="process-title" className="visually-hidden">Our process</h2>
 
@@ -195,55 +194,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-light" id="outcomes" aria-labelledby="outcomes-title">
+      <section className="section section-light" id="difference" aria-labelledby="difference-title">
         <div className="shell">
           <div className="section-kicker">
-            <span>What changes</span>
+            <span>Why companies choose Applied Tech Labs</span>
             <span className="kicker-line" />
           </div>
-          <div className="outcomes-intro">
-            <h2 id="outcomes-title">Capacity you can feel.</h2>
-            <p>
-              Better operations should show up in the pace of the work, the
-              quality of decisions, and the energy your team has left for what
-              matters.
-            </p>
-          </div>
+          <h2 id="difference-title" className="visually-hidden">
+            Why companies choose Applied Tech Labs
+          </h2>
 
           <div className="outcome-grid">
-            {outcomes.map((item) => (
+            {differences.map((item) => (
               <article className="outcome-card" key={item.number}>
                 <span>{item.number}</span>
                 <h3>{item.title}</h3>
                 <p>{item.copy}</p>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="fit-section">
-        <div className="shell fit-grid">
-          <div>
-            <div className="section-kicker section-kicker-light">
-              <span>Built to fit</span>
-              <span className="kicker-line" />
-            </div>
-            <h2>Your operation stays yours.</h2>
-          </div>
-          <div className="fit-copy">
-            <p>
-              We build around the systems, standards, and judgment your
-              business already depends on. Your team stays in control, and
-              every system is designed to be understood, governed, and improved
-              over time.
-            </p>
-            <div className="fit-tags" aria-label="System principles">
-              <span>Human-led</span>
-              <span>Tool-agnostic</span>
-              <span>Secure by design</span>
-              <span>Measurable</span>
-            </div>
           </div>
         </div>
       </section>
@@ -256,20 +224,21 @@ export default function Home() {
             <span className="kicker-line" />
           </div>
           <h2 id="contact-title">
-            Find the friction.
+            Stop forcing AI where it doesn’t belong.
             <br />
-            Create the capacity.
+            Find out where it actually does.
           </h2>
           <p>
-            Start with a focused conversation about where work slows down,
-            where your team gets stretched, and what a better operation could
-            make possible.
+            We begin with a 30-minute conversation about your business, its
+            constraints, and where AI can make a practical difference. No
+            pressure and no sales pitch—just an honest first look at the
+            operation.
           </p>
           <a
             className="button button-light"
-            href="mailto:hello@appliedtechlabs.com?subject=Operations%20review"
+            href="mailto:hello@appliedtechlabs.com?subject=Free%20discovery%20call"
           >
-            Book an operations review <span aria-hidden="true">↗</span>
+            Book a free discovery call <span aria-hidden="true">↗</span>
           </a>
         </div>
       </section>
@@ -277,11 +246,11 @@ export default function Home() {
       <footer>
         <div className="shell footer-inner">
           <Brand footer />
-          <p>Operational clarity, designed and built.</p>
+          <p>Built for stronger company operations.</p>
           <nav aria-label="Footer navigation">
-            <a href="#approach">Approach</a>
-            <a href="#process">Process</a>
-            <a href="#outcomes">Outcomes</a>
+            <a href="#approach">Our philosophy</a>
+            <a href="#process">How we work</a>
+            <a href="#difference">Why ATL</a>
           </nav>
           <span>© 2026</span>
         </div>

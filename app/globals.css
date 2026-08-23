@@ -619,7 +619,7 @@ a:focus-visible {
 
 .contact-section h2 {
   max-width: 880px;
-  font-size: clamp(50px, 6.8vw, 90px);
+  font-size: clamp(44px, 4.8vw, 66px);
   text-transform: uppercase;
 }
 
