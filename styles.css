@@ -107,6 +107,14 @@ h1 {
   letter-spacing: -0.055em;
 }
 
+.hero-kicker {
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
 .hero-bottom {
   display: grid;
   grid-template-columns: 1fr auto;
