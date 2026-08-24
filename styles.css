@@ -3,6 +3,7 @@
   --muted: #666b72;
   --line: #e1e3e5;
   --white: #ffffff;
+  --blue: #405b77;
 }
 
 * {
@@ -105,6 +106,10 @@ h1 {
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: -0.055em;
+}
+
+h1 span {
+  color: var(--blue);
 }
 
 .hero-kicker {
