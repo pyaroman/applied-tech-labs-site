@@ -147,6 +147,11 @@ h1 {
   background: currentColor;
 }
 
+.workflow-note {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
 .hero-actions {
   display: flex;
   align-items: center;
