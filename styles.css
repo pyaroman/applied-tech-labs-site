@@ -108,8 +108,8 @@ h1 {
   letter-spacing: -0.055em;
 }
 
-h1 span {
-  color: var(--blue);
+.hero h1 .hero-accent {
+  color: #405b77;
 }
 
 .hero-kicker {
