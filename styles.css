@@ -124,11 +124,27 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
-.hero-bottom > p {
+.hero-copy > p:first-child {
   max-width: 650px;
   margin-bottom: 0;
   color: var(--muted);
   font-size: 18px;
+}
+
+.roi-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.roi-note::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: currentColor;
 }
 
 .hero-actions {
