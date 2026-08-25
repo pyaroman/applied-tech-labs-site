@@ -64,18 +64,15 @@ nav {
 }
 
 nav a,
-.text-link,
 .label {
   font-size: 13px;
 }
 
-nav a,
-.text-link {
+nav a {
   transition: color 150ms ease;
 }
 
-nav a:hover,
-.text-link:hover {
+nav a:hover {
   color: var(--blue);
 }
 
@@ -189,10 +186,6 @@ h1 {
   gap: 24px;
 }
 
-.text-link {
-  border-bottom: 1px solid currentColor;
-}
-
 .build-section {
   padding: 70px 0 72px;
   border-top: 1px solid var(--line);
@@ -232,11 +225,8 @@ h2 {
   font-size: 17px;
 }
 
-.process-label {
-  margin-top: 64px;
-}
-
 .build-steps {
+  margin-top: 64px;
   border-top: 1px solid var(--line);
 }
 
@@ -403,7 +393,7 @@ h2 {
     padding: 52px 0;
   }
 
-  .process-label {
+  .build-steps {
     margin-top: 48px;
   }
 
