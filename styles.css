@@ -173,28 +173,6 @@ h1 {
   line-height: 1.52;
 }
 
-.roi-note {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 16px 0 0;
-  font-size: 11px;
-  font-weight: 650;
-  letter-spacing: 0.01em;
-}
-
-.roi-note::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  background: var(--blue);
-}
-
-.workflow-note {
-  margin-top: 7px;
-  color: var(--muted);
-}
-
 .hero-actions {
   display: flex;
   justify-content: flex-end;
