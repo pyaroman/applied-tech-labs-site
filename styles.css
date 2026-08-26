@@ -202,8 +202,35 @@ h1 {
 
 .hero-actions {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
   padding-top: 2px;
+}
+
+.hero-actions .button-dark {
+  width: min(100%, 340px);
+  min-height: 58px;
+  padding-inline: 28px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.hero-client-link {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #9da4ab;
+  color: #747b84;
+  font-size: 15px;
+  line-height: 1.25;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.hero-client-link:hover {
+  border-color: var(--blue);
+  color: var(--blue);
 }
 
 .build-section {
@@ -690,16 +717,18 @@ h1 {
 .closing-cta-inner {
   position: relative;
   z-index: 1;
+  width: min(1320px, calc(100% - 64px));
 }
 
 .closing-cta-heading {
-  max-width: 1080px;
+  max-width: none;
   margin-bottom: 42px;
   color: var(--white);
-  font-size: clamp(50px, 6vw, 76px);
+  font-size: clamp(48px, 4.5vw, 64px);
   font-weight: 400;
   line-height: 1.04;
   letter-spacing: -0.05em;
+  white-space: nowrap;
 }
 
 .closing-cta p {
@@ -790,7 +819,7 @@ h1 {
   }
 
   .hero-actions {
-    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .expansion-step {
@@ -803,6 +832,10 @@ h1 {
 
   .closing-cta {
     padding-block: 68px 76px;
+  }
+
+  .closing-cta-heading {
+    white-space: normal;
   }
 }
 
