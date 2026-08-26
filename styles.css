@@ -343,23 +343,6 @@ h1 {
   border: 1px solid var(--blue);
 }
 
-.build-steps {
-  margin-top: 72px;
-  border-top: 1px solid var(--line);
-}
-
-.build-step {
-  display: grid;
-  grid-template-columns: 48px minmax(240px, 320px) minmax(0, 1fr);
-  gap: 28px;
-  align-items: start;
-}
-
-.build-step {
-  padding-block: 24px;
-  border-bottom: 1px solid var(--line);
-}
-
 .step-number {
   padding-top: 3px;
   color: var(--blue);
@@ -368,25 +351,9 @@ h1 {
   letter-spacing: 0.1em;
 }
 
-.build-step h3,
-.build-step p,
 .expansion-copy h3,
 .expansion-copy p {
   margin-bottom: 0;
-}
-
-.build-step h3 {
-  font-size: 18px;
-  font-weight: 520;
-  line-height: 1.35;
-  letter-spacing: -0.015em;
-}
-
-.build-step p {
-  max-width: 610px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.58;
 }
 
 .expansion-step {
@@ -467,11 +434,6 @@ h1 {
 
   .hero-actions {
     justify-content: flex-start;
-  }
-
-  .build-step {
-    grid-template-columns: 40px minmax(200px, 260px) minmax(0, 1fr);
-    gap: 22px;
   }
 
   .expansion-step {
@@ -559,23 +521,6 @@ h1 {
 
   .overview-card-copy {
     padding: 22px;
-  }
-
-  .build-steps {
-    margin-top: 48px;
-  }
-
-  .build-step {
-    grid-template-columns: 34px 1fr;
-    gap: 10px 16px;
-  }
-
-  .build-step {
-    padding-block: 22px;
-  }
-
-  .build-step p {
-    grid-column: 2;
   }
 
   .expansion-step {
