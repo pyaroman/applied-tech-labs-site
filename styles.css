@@ -72,10 +72,51 @@ a:focus-visible {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   color: var(--blue);
   font-size: 17px;
   font-weight: 700;
   letter-spacing: -0.025em;
+}
+
+.logo-mark {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  margin-left: -4px;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 26%, rgba(94, 128, 163, 0.85), transparent 48%),
+    linear-gradient(145deg, #2a3139, #101318 72%);
+  border: 1px solid #3a424b;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(20, 24, 30, 0.28);
+}
+
+.logo-mark::before,
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(199, 209, 220, 0.55);
+  border-radius: 50%;
+}
+
+.logo-mark::before {
+  width: 44px;
+  height: 44px;
+  right: -15px;
+  top: -21px;
+}
+
+.logo-mark::after {
+  width: 30px;
+  height: 30px;
+  right: -8px;
+  top: -13px;
 }
 
 nav {
