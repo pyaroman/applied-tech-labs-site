@@ -91,6 +91,7 @@ a:focus-visible {
   height: 50px;
   transform: translateY(-50%);
   pointer-events: none;
+  clip-path: inset(0 0 0 30px);
 }
 
 .logo-mark::before,
