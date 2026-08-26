@@ -760,6 +760,14 @@ h1 {
     width: min(100% - 48px, 1160px);
   }
 
+  .header nav {
+    gap: 18px;
+  }
+
+  .header nav a {
+    font-size: 10px;
+  }
+
   .hero {
     padding-block: 72px 64px;
   }
