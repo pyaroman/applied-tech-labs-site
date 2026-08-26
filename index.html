@@ -8,7 +8,7 @@
       content="Applied Tech Labs streamlines complex business operations with custom AI and automation systems."
     />
     <title>Applied Tech Labs</title>
-    <link rel="stylesheet" href="styles.css?v=19" />
+    <link rel="stylesheet" href="styles.css?v=20" />
   </head>
   <body>
     <header class="header container">
@@ -214,6 +214,46 @@
         </div>
       </section>
 
+      <section class="use-cases-section" id="use-cases" aria-labelledby="use-cases-title">
+        <div class="container">
+          <h2 id="use-cases-title">Use cases</h2>
+
+          <div class="use-cases-carousel">
+            <div
+              class="use-cases-viewport"
+              id="use-cases-viewport"
+              tabindex="0"
+              aria-label="Use case gallery"
+            >
+              <div class="use-cases-track">
+                <article class="use-case-placeholder" aria-label="Use case placeholder 1"></article>
+                <article class="use-case-placeholder" aria-label="Use case placeholder 2"></article>
+                <article class="use-case-placeholder" aria-label="Use case placeholder 3"></article>
+                <article class="use-case-placeholder" aria-label="Use case placeholder 4"></article>
+                <article
+                  class="use-case-placeholder"
+                  id="use-case-5"
+                  aria-label="Use case placeholder 5"
+                ></article>
+              </div>
+            </div>
+
+            <button
+              class="use-cases-next"
+              type="button"
+              aria-label="Show more use cases"
+              aria-controls="use-cases-viewport"
+            >
+              →
+            </button>
+          </div>
+
+          <div class="use-cases-link-row">
+            <a class="use-cases-link" href="#use-case-5">See all our use cases</a>
+          </div>
+        </div>
+      </section>
+
       <section class="closing-cta" aria-labelledby="closing-cta-title">
         <div class="container closing-cta-inner">
           <h2 class="closing-cta-heading" id="closing-cta-title">
@@ -247,5 +287,50 @@
         </nav>
       </div>
     </footer>
+
+    <script>
+      const useCasesViewport = document.querySelector(".use-cases-viewport");
+      const useCasesNext = document.querySelector(".use-cases-next");
+
+      if (useCasesViewport && useCasesNext) {
+        const updateUseCaseArrow = () => {
+          const remainingScroll =
+            useCasesViewport.scrollWidth -
+            useCasesViewport.clientWidth -
+            useCasesViewport.scrollLeft;
+
+          useCasesNext.disabled = remainingScroll <= 2;
+        };
+
+        useCasesNext.addEventListener("click", () => {
+          useCasesViewport.scrollBy({
+            left: useCasesViewport.clientWidth * 0.68,
+            behavior: "smooth",
+          });
+        });
+
+        useCasesViewport.addEventListener(
+          "wheel",
+          (event) => {
+            const scrollAmount = event.deltaY || event.deltaX;
+            const maxScroll =
+              useCasesViewport.scrollWidth - useCasesViewport.clientWidth;
+            const canScrollForward =
+              scrollAmount > 0 && useCasesViewport.scrollLeft < maxScroll - 1;
+            const canScrollBack =
+              scrollAmount < 0 && useCasesViewport.scrollLeft > 1;
+
+            if (canScrollForward || canScrollBack) {
+              event.preventDefault();
+              useCasesViewport.scrollLeft += scrollAmount;
+            }
+          },
+          { passive: false },
+        );
+
+        useCasesViewport.addEventListener("scroll", updateUseCaseArrow);
+        updateUseCaseArrow();
+      }
+    </script>
   </body>
 </html>

@@ -487,6 +487,116 @@ h1 {
   line-height: 1.6;
 }
 
+.use-cases-section {
+  padding-block: 88px 96px;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.use-cases-section h2 {
+  margin-bottom: 0;
+  font-size: clamp(44px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.use-cases-carousel {
+  position: relative;
+  margin-top: 44px;
+}
+
+.use-cases-viewport {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.use-cases-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.use-cases-viewport:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.use-cases-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 32px) / 3);
+  gap: 16px;
+}
+
+.use-case-placeholder {
+  height: 260px;
+  scroll-snap-align: start;
+  background: #eceff1;
+  border: 1px solid #d8dde1;
+}
+
+.use-cases-next {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background: var(--white);
+  border: 1px solid #c9cfd4;
+  border-radius: 50%;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    opacity 150ms ease;
+}
+
+.use-cases-next:hover {
+  background: #f7f8f9;
+  border-color: var(--blue);
+}
+
+.use-cases-next:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.use-cases-next:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.use-cases-link-row {
+  margin-top: 24px;
+}
+
+.use-cases-link {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.use-cases-link::after {
+  content: "  →";
+}
+
+.use-cases-link:hover {
+  color: var(--ink);
+}
+
 .closing-cta {
   position: relative;
   overflow: hidden;
@@ -610,6 +720,10 @@ h1 {
 
   .expansion-step {
     padding: 32px;
+  }
+
+  .use-cases-track {
+    grid-auto-columns: calc((100% - 16px) / 2.25);
   }
 
   .closing-cta {
@@ -740,6 +854,33 @@ h1 {
 
   .why-us-item > span {
     margin-bottom: 22px;
+  }
+
+  .use-cases-section {
+    padding-block: 64px;
+  }
+
+  .use-cases-section h2 {
+    font-size: clamp(39px, 11vw, 50px);
+  }
+
+  .use-cases-carousel {
+    margin-top: 34px;
+  }
+
+  .use-cases-track {
+    grid-auto-columns: 86%;
+    gap: 12px;
+  }
+
+  .use-case-placeholder {
+    height: 210px;
+  }
+
+  .use-cases-next {
+    right: 10px;
+    width: 38px;
+    height: 38px;
   }
 
   .closing-cta {
