@@ -503,7 +503,6 @@ h1 {
 }
 
 .use-cases-carousel {
-  position: relative;
   margin-top: 44px;
 }
 
@@ -527,58 +526,48 @@ h1 {
 .use-cases-track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 32px) / 3);
-  gap: 16px;
+  grid-auto-columns: calc(100% / 3);
 }
 
 .use-case-placeholder {
-  height: 260px;
+  height: 300px;
   scroll-snap-align: start;
-  background: #eceff1;
-  border: 1px solid #d8dde1;
-}
-
-.use-cases-next {
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-50%);
-  background: var(--white);
-  border: 1px solid #c9cfd4;
-  border-radius: 50%;
-  color: var(--blue);
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 1;
-  transition:
-    background-color 150ms ease,
-    border-color 150ms ease,
-    opacity 150ms ease;
-}
-
-.use-cases-next:hover {
   background: #f7f8f9;
-  border-color: var(--blue);
+  border-top: 1px solid #d9dde1;
+  border-right: 1px solid #d9dde1;
+  border-bottom: 1px solid #d9dde1;
 }
 
-.use-cases-next:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
+.use-case-placeholder:first-child {
+  border-left: 1px solid #d9dde1;
 }
 
-.use-cases-next:disabled {
-  opacity: 0;
-  pointer-events: none;
+.use-case-placeholder:nth-child(even) {
+  background: #f2f4f5;
+}
+
+.case-studies-progress {
+  position: relative;
+  height: 3px;
+  margin-top: 26px;
+  overflow: hidden;
+  background: #dfe2e5;
+  border-radius: 999px;
+}
+
+.case-studies-progress-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88px;
+  height: 3px;
+  background: var(--ink);
+  border-radius: 999px;
+  will-change: transform;
 }
 
 .use-cases-link-row {
-  margin-top: 24px;
+  margin-top: 22px;
 }
 
 .use-cases-link {
@@ -786,7 +775,7 @@ h1 {
   }
 
   .use-cases-track {
-    grid-auto-columns: calc((100% - 16px) / 2.25);
+    grid-auto-columns: calc(100% / 2.25);
   }
 
   .closing-cta {
@@ -933,17 +922,18 @@ h1 {
 
   .use-cases-track {
     grid-auto-columns: 86%;
-    gap: 12px;
   }
 
   .use-case-placeholder {
-    height: 210px;
+    height: 240px;
   }
 
-  .use-cases-next {
-    right: 10px;
-    width: 38px;
-    height: 38px;
+  .case-studies-progress {
+    margin-top: 20px;
+  }
+
+  .case-studies-progress-thumb {
+    width: 64px;
   }
 
   .resource-library-section {

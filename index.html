@@ -8,7 +8,7 @@
       content="Applied Tech Labs streamlines complex business operations with custom AI and automation systems."
     />
     <title>Applied Tech Labs</title>
-    <link rel="stylesheet" href="styles.css?v=22" />
+    <link rel="stylesheet" href="styles.css?v=23" />
   </head>
   <body>
     <header class="header container">
@@ -240,14 +240,9 @@
               </div>
             </div>
 
-            <button
-              class="use-cases-next"
-              type="button"
-              aria-label="Show more case studies"
-              aria-controls="case-studies-viewport"
-            >
-              →
-            </button>
+            <div class="case-studies-progress" aria-hidden="true">
+              <span class="case-studies-progress-thumb"></span>
+            </div>
           </div>
 
           <div class="use-cases-link-row">
@@ -311,24 +306,30 @@
 
     <script>
       const useCasesViewport = document.querySelector(".use-cases-viewport");
-      const useCasesNext = document.querySelector(".use-cases-next");
+      const caseStudiesProgress = document.querySelector(
+        ".case-studies-progress",
+      );
+      const caseStudiesProgressThumb = document.querySelector(
+        ".case-studies-progress-thumb",
+      );
 
-      if (useCasesViewport && useCasesNext) {
-        const updateUseCaseArrow = () => {
-          const remainingScroll =
-            useCasesViewport.scrollWidth -
-            useCasesViewport.clientWidth -
-            useCasesViewport.scrollLeft;
+      if (
+        useCasesViewport &&
+        caseStudiesProgress &&
+        caseStudiesProgressThumb
+      ) {
+        const updateCaseStudyProgress = () => {
+          const maxScroll =
+            useCasesViewport.scrollWidth - useCasesViewport.clientWidth;
+          const availableTravel =
+            caseStudiesProgress.clientWidth -
+            caseStudiesProgressThumb.offsetWidth;
+          const progress =
+            maxScroll > 0 ? useCasesViewport.scrollLeft / maxScroll : 0;
 
-          useCasesNext.disabled = remainingScroll <= 2;
+          caseStudiesProgressThumb.style.transform =
+            `translateX(${progress * availableTravel}px)`;
         };
-
-        useCasesNext.addEventListener("click", () => {
-          useCasesViewport.scrollBy({
-            left: useCasesViewport.clientWidth * 0.68,
-            behavior: "smooth",
-          });
-        });
 
         useCasesViewport.addEventListener(
           "wheel",
@@ -349,8 +350,9 @@
           { passive: false },
         );
 
-        useCasesViewport.addEventListener("scroll", updateUseCaseArrow);
-        updateUseCaseArrow();
+        useCasesViewport.addEventListener("scroll", updateCaseStudyProgress);
+        window.addEventListener("resize", updateCaseStudyProgress);
+        updateCaseStudyProgress();
       }
     </script>
   </body>
