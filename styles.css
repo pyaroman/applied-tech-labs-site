@@ -313,6 +313,36 @@ h1 {
   line-height: 1.58;
 }
 
+.overview-details {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.overview-details li {
+  position: relative;
+  padding-left: 18px;
+  color: #555c65;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.overview-details li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%);
+  background: #eef2f5;
+  border: 1px solid var(--blue);
+}
+
 .build-steps {
   margin-top: 72px;
   border-top: 1px solid var(--line);
