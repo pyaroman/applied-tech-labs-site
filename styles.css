@@ -538,14 +538,14 @@ h1 {
 
 .expansion-step {
   max-width: 1040px;
-  margin: 20px auto 0;
+  margin: 28px auto 0;
   padding: 22px;
   background: var(--white);
   border: 1px solid rgba(217, 221, 225, 0.8);
-  border-radius: 20px;
+  border-radius: 16px;
   box-shadow:
-    0 32px 70px -26px rgba(32, 36, 43, 0.22),
-    0 14px 32px rgba(32, 36, 43, 0.08);
+    0 24px 50px -20px rgba(32, 36, 43, 0.18),
+    0 10px 24px rgba(32, 36, 43, 0.06);
 }
 
 .expansion-copy {
