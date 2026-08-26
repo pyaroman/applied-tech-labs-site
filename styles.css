@@ -211,8 +211,7 @@ h1 {
 }
 
 .hero-accent,
-.build-heading span,
-.approach-intro h2 span {
+.build-heading span {
   color: var(--blue);
 }
 
@@ -626,33 +625,24 @@ h1 {
 }
 
 .approach-intro {
-  max-width: 780px;
+  max-width: 880px;
   margin-inline: auto;
   text-align: center;
 }
 
 .approach-intro h2 {
   margin-bottom: 22px;
-  font-size: clamp(36px, 4.4vw, 52px);
+  font-size: clamp(44px, 5vw, 62px);
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.06;
   letter-spacing: -0.045em;
 }
 
-.approach-lead {
-  max-width: 620px;
+.approach-intro p {
+  max-width: 760px;
   margin: 0 auto;
-  color: var(--ink);
-  font-size: 19px;
-  font-weight: 550;
-  line-height: 1.45;
-}
-
-.approach-body {
-  max-width: 700px;
-  margin: 14px auto 0;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.62;
 }
 
@@ -1422,10 +1412,6 @@ h1 {
 
   .approach-section {
     padding-block: 56px;
-  }
-
-  .approach-lead {
-    font-size: 17px;
   }
 
   .approach-grid {
