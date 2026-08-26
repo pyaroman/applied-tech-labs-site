@@ -772,17 +772,22 @@ h1 {
 }
 
 .resource-library-section {
-  padding-block: 88px 92px;
-  background: #15191e;
-  color: var(--white);
-  border-top: 1px solid #303740;
+  padding-block: 88px;
+  background: #eef2f5;
+  border-top: 1px solid var(--line);
 }
 
 .resource-library-inner {
+  width: min(1160px, calc(100% - 64px));
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: 64px;
   align-items: center;
+  padding: 54px;
+  background: #15191e;
+  color: var(--white);
+  border: 1px solid #303740;
+  box-shadow: 0 24px 70px rgba(32, 36, 43, 0.18);
 }
 
 .resource-library-copy {
@@ -1109,8 +1114,10 @@ h1 {
   }
 
   .resource-library-inner {
+    width: min(100% - 48px, 1160px);
     grid-template-columns: 1fr;
     gap: 44px;
+    padding: 44px;
   }
 
   .resource-library-copy,
@@ -1318,7 +1325,13 @@ h1 {
   }
 
   .resource-library-section {
-    padding-block: 64px;
+    padding-block: 56px;
+  }
+
+  .resource-library-inner {
+    width: calc(100% - 40px);
+    gap: 36px;
+    padding: 28px;
   }
 
   .resource-library-section h2 {
