@@ -255,28 +255,8 @@ h1 {
   stroke-width: 1.5;
 }
 
-.diagram-line-accent,
-.diagram-mark {
+.diagram-line-accent {
   stroke: var(--blue);
-}
-
-.diagram-dot {
-  fill: #aeb5bc;
-}
-
-.diagram-dot-accent {
-  fill: var(--blue);
-}
-
-.diagram-ring {
-  fill: var(--white);
-  stroke: var(--blue);
-  stroke-width: 1.5;
-}
-
-.diagram-mark {
-  fill: none;
-  stroke-width: 1.8;
 }
 
 .overview-card-copy {
