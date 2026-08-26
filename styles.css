@@ -407,16 +407,15 @@ h1 {
 }
 
 .expansion-step {
-  margin-top: 20px;
-  padding: 32px;
+  max-width: 1040px;
+  margin: 20px auto 0;
+  padding: 26px;
   background: var(--surface);
   border: 1px solid #d9dde1;
 }
 
 .expansion-copy {
   display: block;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #d9dde1;
   text-align: center;
 }
 
@@ -428,23 +427,23 @@ h1 {
 
 .expansion-copy h3 {
   max-width: none;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.18;
   letter-spacing: -0.03em;
 }
 
 .expansion-copy p {
-  max-width: 760px;
-  margin: 8px auto 0;
+  max-width: 720px;
+  margin: 7px auto 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.58;
 }
 
 .system-visual {
-  max-width: 960px;
-  margin: 26px auto 0;
+  max-width: 840px;
+  margin: 18px auto 0;
 }
 
 .system-visual img {
@@ -454,18 +453,6 @@ h1 {
   object-fit: cover;
   background: var(--white);
   border: 1px solid #d9dde1;
-}
-
-.system-visual figcaption {
-  margin-top: 12px;
-  margin-bottom: 0;
-  color: var(--blue);
-  font-size: 10px;
-  font-weight: 650;
-  letter-spacing: 0.12em;
-  line-height: 1.5;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .why-us-section {
@@ -823,7 +810,7 @@ h1 {
   }
 
   .expansion-step {
-    padding: 32px;
+    padding: 24px;
   }
 
   .use-cases-track {
@@ -924,11 +911,11 @@ h1 {
 
   .expansion-step {
     margin-top: 20px;
-    padding: 22px;
+    padding: 18px;
   }
 
   .expansion-copy {
-    padding-bottom: 24px;
+    padding-bottom: 0;
   }
 
   .expansion-copy h3 {
@@ -936,7 +923,7 @@ h1 {
   }
 
   .system-visual {
-    margin-top: 24px;
+    margin-top: 16px;
   }
 
   .why-us-section {
