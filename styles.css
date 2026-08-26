@@ -74,6 +74,10 @@ nav {
   align-items: center;
 }
 
+.header nav {
+  gap: 28px;
+}
+
 nav a {
   color: #43484f;
   font-size: 12px;
@@ -414,83 +418,73 @@ h1 {
   text-transform: uppercase;
 }
 
-.integrations-section {
-  margin-top: 72px;
-  padding-top: 64px;
+.why-us-section {
+  padding-block: 88px 96px;
+  background: var(--surface);
   border-top: 1px solid var(--line);
+}
+
+.why-us-intro {
+  max-width: 880px;
+  margin-inline: auto;
   text-align: center;
 }
 
-.integrations-label {
-  display: inline-block;
-  margin-bottom: 18px;
-  padding: 6px 10px;
-  border: 1px solid #aeb7c0;
-  color: var(--blue);
-  font-size: 10px;
-  font-weight: 650;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.integrations-section h2 {
-  max-width: 760px;
-  margin: 0 auto;
-  font-size: clamp(38px, 4.5vw, 54px);
+.why-us-intro h2 {
+  margin-bottom: 22px;
+  font-size: clamp(44px, 5vw, 62px);
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.06;
   letter-spacing: -0.045em;
 }
 
-.integrations-intro {
-  max-width: 690px;
-  margin: 20px auto 0;
+.why-us-intro p {
+  max-width: 760px;
+  margin: 0 auto;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.62;
 }
 
-.integrations-box {
+.why-us-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 38px;
-  padding: 30px;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(145deg, #405b77, #2c4258);
-  background-size: 48px 48px, 48px 48px, auto;
-  border: 1px solid #354f69;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 52px;
+  padding: 1px;
+  background: #d9dde1;
 }
 
-.integration-logo {
-  min-height: 116px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 18px 10px 14px;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.38);
+.why-us-item {
+  min-height: 230px;
+  padding: 32px;
+  background: var(--white);
 }
 
-.integration-logo img {
-  width: 30px;
-  height: 30px;
+.why-us-item > span {
   display: block;
-  object-fit: contain;
+  margin-bottom: 32px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
 }
 
-.integration-logo span {
-  color: #48515b;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  line-height: 1.2;
-  text-transform: uppercase;
+.why-us-item h3 {
+  max-width: 470px;
+  margin-bottom: 12px;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+}
+
+.why-us-item p {
+  max-width: 490px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .closing-cta {
@@ -618,10 +612,6 @@ h1 {
     padding: 32px;
   }
 
-  .integrations-box {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .closing-cta {
     padding-block: 68px 76px;
   }
@@ -726,34 +716,30 @@ h1 {
     margin-top: 24px;
   }
 
-  .integrations-section {
-    margin-top: 52px;
-    padding-top: 48px;
+  .why-us-section {
+    padding-block: 64px;
   }
 
-  .integrations-section h2 {
-    font-size: clamp(34px, 9vw, 44px);
+  .why-us-intro h2 {
+    font-size: clamp(39px, 11vw, 50px);
   }
 
-  .integrations-box {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    margin-top: 30px;
-    padding: 12px;
+  .why-us-intro p {
+    font-size: 16px;
   }
 
-  .integration-logo {
-    min-height: 98px;
-    padding: 14px 6px 12px;
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    margin-top: 38px;
   }
 
-  .integration-logo img {
-    width: 26px;
-    height: 26px;
+  .why-us-item {
+    min-height: 0;
+    padding: 26px;
   }
 
-  .integration-logo span {
-    font-size: 8px;
+  .why-us-item > span {
+    margin-bottom: 22px;
   }
 
   .closing-cta {
