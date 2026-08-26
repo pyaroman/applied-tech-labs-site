@@ -318,8 +318,6 @@
 
       if (useCasesViewport && caseStudiesProgress) {
         let progressFrame = 0;
-        let wheelFrame = 0;
-        let pendingWheelDelta = 0;
 
         const updateCaseStudyProgress = () => {
           progressFrame = 0;
@@ -341,43 +339,6 @@
             progressFrame = requestAnimationFrame(updateCaseStudyProgress);
           }
         };
-
-        useCasesViewport.addEventListener(
-          "wheel",
-          (event) => {
-            if (Math.abs(event.deltaX) >= Math.abs(event.deltaY)) {
-              return;
-            }
-
-            const deltaScale =
-              event.deltaMode === 1
-                ? 16
-                : event.deltaMode === 2
-                  ? useCasesViewport.clientWidth
-                  : 1;
-            const scrollAmount = event.deltaY * deltaScale;
-            const maxScroll =
-              useCasesViewport.scrollWidth - useCasesViewport.clientWidth;
-            const canScrollForward =
-              scrollAmount > 0 && useCasesViewport.scrollLeft < maxScroll - 1;
-            const canScrollBack =
-              scrollAmount < 0 && useCasesViewport.scrollLeft > 1;
-
-            if (canScrollForward || canScrollBack) {
-              event.preventDefault();
-              pendingWheelDelta += scrollAmount;
-
-              if (!wheelFrame) {
-                wheelFrame = requestAnimationFrame(() => {
-                  useCasesViewport.scrollLeft += pendingWheelDelta;
-                  pendingWheelDelta = 0;
-                  wheelFrame = 0;
-                });
-              }
-            }
-          },
-          { passive: false },
-        );
 
         caseStudiesProgress.addEventListener("input", () => {
           const maxScroll =
