@@ -72,6 +72,8 @@ a:focus-visible {
 }
 
 .logo {
+  position: relative;
+  z-index: 0;
   display: inline-flex;
   align-items: center;
   color: var(--blue);
@@ -81,42 +83,28 @@ a:focus-visible {
 }
 
 .logo-mark {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  flex: 0 0 auto;
-  margin-left: -4px;
-  isolation: isolate;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 72% 26%, rgba(94, 128, 163, 0.85), transparent 48%),
-    linear-gradient(145deg, #2a3139, #101318 72%);
-  border: 1px solid #3a424b;
-  border-radius: 8px;
-  box-shadow: 0 6px 14px rgba(20, 24, 30, 0.28);
+  position: absolute;
+  z-index: -1;
+  right: -20px;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .logo-mark::before,
 .logo-mark::after {
   content: "";
   position: absolute;
-  z-index: -1;
-  border: 1px solid rgba(199, 209, 220, 0.55);
+  inset: 0;
+  border: 1.5px solid rgba(64, 91, 119, 0.45);
   border-radius: 50%;
 }
 
-.logo-mark::before {
-  width: 44px;
-  height: 44px;
-  right: -15px;
-  top: -21px;
-}
-
 .logo-mark::after {
-  width: 30px;
-  height: 30px;
-  right: -8px;
-  top: -13px;
+  inset: 13px;
+  border-color: rgba(64, 91, 119, 0.7);
 }
 
 nav {
