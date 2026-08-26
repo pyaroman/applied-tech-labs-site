@@ -272,7 +272,7 @@ h1 {
   position: relative;
   z-index: 2;
   padding-block: 68px 56px;
-  background: var(--surface);
+  background: var(--white);
 }
 
 .founder-card {
