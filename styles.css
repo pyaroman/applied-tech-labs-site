@@ -293,12 +293,13 @@ h1 {
 }
 
 .founder-copy h2 {
-  max-width: 700px;
+  max-width: none;
   margin-bottom: 16px;
-  font-size: clamp(30px, 2.8vw, 38px);
+  font-size: 28px;
   font-weight: 430;
   line-height: 1.08;
   letter-spacing: -0.04em;
+  white-space: nowrap;
 }
 
 .founder-copy > p:not(.founder-label) {
@@ -1070,6 +1071,12 @@ h1 {
 
 .footer-nav a:hover {
   color: var(--white);
+}
+
+@media (max-width: 1160px) {
+  .founder-copy h2 {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 900px) {
