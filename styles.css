@@ -185,6 +185,11 @@ h1 {
 }
 
 .build-section .label {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 6px 10px;
+  border: 1px solid #aeb7c0;
+  line-height: 1;
   text-align: center;
 }
 
