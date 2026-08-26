@@ -264,17 +264,17 @@ h1 {
   position: relative;
   z-index: 2;
   margin-top: -24px;
-  padding-bottom: 72px;
+  padding-bottom: 48px;
 }
 
 .founder-card {
   width: min(1080px, calc(100% - 64px));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 60px;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 44px;
   align-items: center;
   margin: 0 auto;
-  padding: 44px;
+  padding: 32px;
   background: var(--white);
   border: 1px solid #d9dde1;
   box-shadow: 0 22px 55px rgba(32, 36, 43, 0.09);
@@ -282,7 +282,7 @@ h1 {
 
 .founder-label {
   width: fit-content;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   padding: 6px 10px;
   border: 1px solid #aeb7c0;
   color: var(--blue);
@@ -293,9 +293,9 @@ h1 {
 }
 
 .founder-copy h2 {
-  max-width: 660px;
-  margin-bottom: 22px;
-  font-size: clamp(32px, 3.2vw, 44px);
+  max-width: 700px;
+  margin-bottom: 16px;
+  font-size: clamp(30px, 2.8vw, 38px);
   font-weight: 430;
   line-height: 1.08;
   letter-spacing: -0.04em;
@@ -303,10 +303,10 @@ h1 {
 
 .founder-copy > p:not(.founder-label) {
   max-width: 680px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.62;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .founder-copy > p:last-child {
@@ -329,7 +329,7 @@ h1 {
 .founder-portrait figcaption {
   display: grid;
   gap: 2px;
-  padding-top: 12px;
+  padding-top: 10px;
 }
 
 .founder-portrait strong {
@@ -772,7 +772,7 @@ h1 {
 }
 
 .resource-library-section {
-  padding-block: 88px;
+  padding-block: 60px;
   background: #eef2f5;
   border-top: 1px solid var(--line);
 }
@@ -780,10 +780,10 @@ h1 {
 .resource-library-inner {
   width: min(1160px, calc(100% - 64px));
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 64px;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  gap: 48px;
   align-items: center;
-  padding: 54px;
+  padding: 36px 42px;
   background: #15191e;
   color: var(--white);
   border: 1px solid #303740;
@@ -796,7 +796,7 @@ h1 {
 
 .resource-library-label {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding: 6px 10px;
   border: 1px solid #59636e;
   color: #afc0d2;
@@ -808,10 +808,10 @@ h1 {
 }
 
 .resource-library-section h2 {
-  max-width: 520px;
+  max-width: 540px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(42px, 4.3vw, 58px);
+  font-size: clamp(36px, 3.6vw, 48px);
   font-weight: 400;
   line-height: 1.06;
   letter-spacing: -0.045em;
@@ -819,38 +819,38 @@ h1 {
 
 .resource-library-messaging {
   display: grid;
-  gap: 14px;
-  margin-top: 24px;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .resource-library-messaging p {
   max-width: 520px;
   margin: 0;
   color: #aeb3bb;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .resource-library-actions {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
-  margin-top: 32px;
+  gap: 14px;
+  margin-top: 24px;
 }
 
 .workshop-button {
-  min-width: 238px;
-  min-height: 58px;
+  min-width: 220px;
+  min-height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 6px 7px 6px 24px;
+  gap: 20px;
+  padding: 6px 7px 6px 21px;
   background: var(--white);
   color: var(--ink);
   border-radius: 999px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   transition:
     background-color 150ms ease,
@@ -858,8 +858,8 @@ h1 {
 }
 
 .workshop-button-icon {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -867,7 +867,7 @@ h1 {
   background: var(--blue);
   color: var(--white);
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1;
 }
 
@@ -1100,9 +1100,9 @@ h1 {
 
   .founder-card {
     width: min(100% - 48px, 1080px);
-    grid-template-columns: minmax(0, 1fr) 240px;
-    gap: 38px;
-    padding: 36px;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 32px;
+    padding: 30px;
   }
 
   .expansion-step {
@@ -1116,8 +1116,8 @@ h1 {
   .resource-library-inner {
     width: min(100% - 48px, 1160px);
     grid-template-columns: 1fr;
-    gap: 44px;
-    padding: 44px;
+    gap: 30px;
+    padding: 34px;
   }
 
   .resource-library-copy,
@@ -1199,26 +1199,26 @@ h1 {
 
   .founder-section {
     margin-top: -14px;
-    padding-bottom: 56px;
+    padding-bottom: 44px;
   }
 
   .founder-card {
     width: calc(100% - 40px);
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 26px;
+    gap: 24px;
+    padding: 22px;
   }
 
   .founder-copy h2 {
-    font-size: clamp(31px, 9vw, 40px);
+    font-size: clamp(29px, 8vw, 36px);
   }
 
   .founder-copy > p:not(.founder-label) {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .founder-portrait {
-    max-width: 280px;
+    max-width: 220px;
   }
 
   .build-section {
@@ -1325,25 +1325,25 @@ h1 {
   }
 
   .resource-library-section {
-    padding-block: 56px;
+    padding-block: 44px;
   }
 
   .resource-library-inner {
     width: calc(100% - 40px);
-    gap: 36px;
-    padding: 28px;
+    gap: 28px;
+    padding: 24px;
   }
 
   .resource-library-section h2 {
-    font-size: clamp(39px, 11vw, 50px);
+    font-size: clamp(35px, 10vw, 44px);
   }
 
   .resource-library-messaging p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .resource-library-actions {
-    margin-top: 28px;
+    margin-top: 22px;
   }
 
   .resource-video-placeholder {
