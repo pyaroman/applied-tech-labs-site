@@ -546,8 +546,6 @@ h1 {
 .use-cases-viewport {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
 
@@ -568,7 +566,6 @@ h1 {
 
 .use-case-placeholder {
   height: 300px;
-  scroll-snap-align: start;
   background: #f7f8f9;
   border-top: 1px solid #d9dde1;
   border-right: 1px solid #d9dde1;
@@ -584,23 +581,63 @@ h1 {
 }
 
 .case-studies-progress {
-  position: relative;
-  height: 3px;
-  margin-top: 26px;
-  overflow: hidden;
+  --scroll-progress: 0%;
+  display: block;
+  width: 100%;
+  height: 18px;
+  margin-top: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: ew-resize;
+}
+
+.case-studies-progress:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+.case-studies-progress::-webkit-slider-runnable-track {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--blue) 0 var(--scroll-progress),
+    #dfe2e5 var(--scroll-progress) 100%
+  );
+  border-radius: 999px;
+}
+
+.case-studies-progress::-webkit-slider-thumb {
+  width: 72px;
+  height: 6px;
+  margin-top: -2px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: var(--ink);
+  border-radius: 999px;
+}
+
+.case-studies-progress::-moz-range-track {
+  height: 2px;
+  border: 0;
   background: #dfe2e5;
   border-radius: 999px;
 }
 
-.case-studies-progress-thumb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 88px;
-  height: 3px;
+.case-studies-progress::-moz-range-progress {
+  height: 2px;
+  background: var(--blue);
+  border-radius: 999px;
+}
+
+.case-studies-progress::-moz-range-thumb {
+  width: 72px;
+  height: 6px;
+  border: 0;
   background: var(--ink);
   border-radius: 999px;
-  will-change: transform;
 }
 
 .use-cases-link-row {
@@ -976,8 +1013,12 @@ h1 {
     margin-top: 20px;
   }
 
-  .case-studies-progress-thumb {
-    width: 64px;
+  .case-studies-progress::-webkit-slider-thumb {
+    width: 56px;
+  }
+
+  .case-studies-progress::-moz-range-thumb {
+    width: 56px;
   }
 
   .resource-library-section {

@@ -8,7 +8,7 @@
       content="Applied Tech Labs streamlines complex business operations with custom AI and automation systems."
     />
     <title>Applied Tech Labs</title>
-    <link rel="stylesheet" href="styles.css?v=26" />
+    <link rel="stylesheet" href="styles.css?v=27" />
   </head>
   <body>
     <header class="site-header">
@@ -239,9 +239,15 @@
               </div>
             </div>
 
-            <div class="case-studies-progress" aria-hidden="true">
-              <span class="case-studies-progress-thumb"></span>
-            </div>
+            <input
+              class="case-studies-progress"
+              type="range"
+              min="0"
+              max="100"
+              step="0.1"
+              value="0"
+              aria-label="Scroll through case studies"
+            />
           </div>
 
           <div class="use-cases-link-row">
@@ -308,32 +314,47 @@
       const caseStudiesProgress = document.querySelector(
         ".case-studies-progress",
       );
-      const caseStudiesProgressThumb = document.querySelector(
-        ".case-studies-progress-thumb",
-      );
 
-      if (
-        useCasesViewport &&
-        caseStudiesProgress &&
-        caseStudiesProgressThumb
-      ) {
+      if (useCasesViewport && caseStudiesProgress) {
+        let progressFrame = 0;
+        let wheelFrame = 0;
+        let pendingWheelDelta = 0;
+
         const updateCaseStudyProgress = () => {
+          progressFrame = 0;
           const maxScroll =
             useCasesViewport.scrollWidth - useCasesViewport.clientWidth;
-          const availableTravel =
-            caseStudiesProgress.clientWidth -
-            caseStudiesProgressThumb.offsetWidth;
           const progress =
-            maxScroll > 0 ? useCasesViewport.scrollLeft / maxScroll : 0;
+            maxScroll > 0 ? (useCasesViewport.scrollLeft / maxScroll) * 100 : 0;
 
-          caseStudiesProgressThumb.style.transform =
-            `translateX(${progress * availableTravel}px)`;
+          caseStudiesProgress.value = String(progress);
+          caseStudiesProgress.style.setProperty(
+            "--scroll-progress",
+            `${progress}%`,
+          );
+          caseStudiesProgress.disabled = maxScroll <= 0;
+        };
+
+        const requestProgressUpdate = () => {
+          if (!progressFrame) {
+            progressFrame = requestAnimationFrame(updateCaseStudyProgress);
+          }
         };
 
         useCasesViewport.addEventListener(
           "wheel",
           (event) => {
-            const scrollAmount = event.deltaY || event.deltaX;
+            if (Math.abs(event.deltaX) >= Math.abs(event.deltaY)) {
+              return;
+            }
+
+            const deltaScale =
+              event.deltaMode === 1
+                ? 16
+                : event.deltaMode === 2
+                  ? useCasesViewport.clientWidth
+                  : 1;
+            const scrollAmount = event.deltaY * deltaScale;
             const maxScroll =
               useCasesViewport.scrollWidth - useCasesViewport.clientWidth;
             const canScrollForward =
@@ -343,14 +364,33 @@
 
             if (canScrollForward || canScrollBack) {
               event.preventDefault();
-              useCasesViewport.scrollLeft += scrollAmount;
+              pendingWheelDelta += scrollAmount;
+
+              if (!wheelFrame) {
+                wheelFrame = requestAnimationFrame(() => {
+                  useCasesViewport.scrollLeft += pendingWheelDelta;
+                  pendingWheelDelta = 0;
+                  wheelFrame = 0;
+                });
+              }
             }
           },
           { passive: false },
         );
 
-        useCasesViewport.addEventListener("scroll", updateCaseStudyProgress);
-        window.addEventListener("resize", updateCaseStudyProgress);
+        caseStudiesProgress.addEventListener("input", () => {
+          const maxScroll =
+            useCasesViewport.scrollWidth - useCasesViewport.clientWidth;
+          useCasesViewport.scrollLeft =
+            maxScroll * (Number(caseStudiesProgress.value) / 100);
+        });
+
+        useCasesViewport.addEventListener("scroll", requestProgressUpdate, {
+          passive: true,
+        });
+        window.addEventListener("resize", requestProgressUpdate, {
+          passive: true,
+        });
         updateCaseStudyProgress();
       }
     </script>
