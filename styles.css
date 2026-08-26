@@ -163,7 +163,7 @@ nav a:hover {
 .label {
   margin-bottom: 18px;
   color: var(--blue);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -646,7 +646,7 @@ h1 {
 
 .use-cases-link {
   color: var(--blue);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 650;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -677,7 +677,7 @@ h1 {
   padding: 6px 10px;
   border: 1px solid #aeb7c0;
   color: var(--blue);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 650;
   letter-spacing: 0.12em;
   line-height: 1;
@@ -705,7 +705,7 @@ h1 {
   display: inline-block;
   margin-top: 32px;
   color: var(--blue);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -812,7 +812,7 @@ h1 {
 
 .footer-nav a {
   color: #aeb3bb;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.08em;
 }
 
@@ -895,7 +895,7 @@ h1 {
   .hero-kicker,
   .label {
     margin-bottom: 14px;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.5;
   }
 
