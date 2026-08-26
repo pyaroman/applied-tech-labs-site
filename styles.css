@@ -348,8 +348,7 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
-.build-step,
-.expansion-copy {
+.build-step {
   display: grid;
   grid-template-columns: 48px minmax(240px, 320px) minmax(0, 1fr);
   gap: 28px;
@@ -392,33 +391,44 @@ h1 {
 
 .expansion-step {
   margin-top: 20px;
-  padding: 40px;
+  padding: 32px;
   background: var(--surface);
   border: 1px solid #d9dde1;
 }
 
 .expansion-copy {
-  padding-bottom: 32px;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 7px 18px;
+  align-items: start;
+  padding-bottom: 24px;
   border-bottom: 1px solid #d9dde1;
 }
 
+.expansion-copy .step-number {
+  grid-row: 1 / span 2;
+}
+
 .expansion-copy h3 {
-  max-width: 300px;
-  font-size: 26px;
+  grid-column: 2;
+  max-width: none;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.18;
   letter-spacing: -0.03em;
 }
 
 .expansion-copy p {
-  max-width: 610px;
+  grid-column: 2;
+  max-width: 760px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.58;
 }
 
 .system-visual {
-  margin: 34px 0 0;
+  max-width: 960px;
+  margin: 26px auto 0;
 }
 
 .system-visual img {
@@ -459,8 +469,7 @@ h1 {
     justify-content: flex-start;
   }
 
-  .build-step,
-  .expansion-copy {
+  .build-step {
     grid-template-columns: 40px minmax(200px, 260px) minmax(0, 1fr);
     gap: 22px;
   }
@@ -556,8 +565,7 @@ h1 {
     margin-top: 48px;
   }
 
-  .build-step,
-  .expansion-copy {
+  .build-step {
     grid-template-columns: 34px 1fr;
     gap: 10px 16px;
   }
@@ -566,8 +574,7 @@ h1 {
     padding-block: 22px;
   }
 
-  .build-step p,
-  .expansion-copy p {
+  .build-step p {
     grid-column: 2;
   }
 
@@ -577,6 +584,8 @@ h1 {
   }
 
   .expansion-copy {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 7px 14px;
     padding-bottom: 24px;
   }
 
