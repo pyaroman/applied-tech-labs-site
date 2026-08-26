@@ -905,11 +905,12 @@ h1 {
   position: relative;
   z-index: 1;
   width: min(1320px, calc(100% - 64px));
+  text-align: center;
 }
 
 .closing-cta-heading {
   max-width: none;
-  margin-bottom: 42px;
+  margin: 0 auto 42px;
   color: var(--white);
   font-size: clamp(48px, 4.5vw, 64px);
   font-weight: 400;
@@ -920,7 +921,7 @@ h1 {
 
 .closing-cta p {
   max-width: 680px;
-  margin-bottom: 34px;
+  margin: 0 auto 34px;
   color: #aeb3bb;
   font-size: 19px;
   line-height: 1.6;
