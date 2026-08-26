@@ -209,6 +209,110 @@ h1 {
   line-height: 1.62;
 }
 
+.process-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 56px;
+}
+
+.overview-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--white);
+  border: 1px solid #d9dde1;
+}
+
+.overview-visual {
+  height: 202px;
+  display: flex;
+  align-items: center;
+  padding: 24px 28px;
+  background: var(--surface);
+  border-bottom: 1px solid #d9dde1;
+}
+
+.overview-svg {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+}
+
+.diagram-node {
+  fill: var(--white);
+  stroke: #abb2b9;
+  stroke-width: 1.5;
+}
+
+.diagram-node-accent {
+  fill: #eef2f5;
+  stroke: var(--blue);
+}
+
+.diagram-line {
+  fill: none;
+  stroke: #aeb5bc;
+  stroke-width: 1.5;
+}
+
+.diagram-line-accent,
+.diagram-mark {
+  stroke: var(--blue);
+}
+
+.diagram-dot {
+  fill: #aeb5bc;
+}
+
+.diagram-dot-accent {
+  fill: var(--blue);
+}
+
+.diagram-ring {
+  fill: var(--white);
+  stroke: var(--blue);
+  stroke-width: 1.5;
+}
+
+.diagram-mark {
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.overview-card-copy {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 20px;
+  padding: 28px;
+}
+
+.overview-number {
+  padding-top: 4px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+}
+
+.overview-card h3,
+.overview-card p {
+  margin-bottom: 0;
+}
+
+.overview-card h3 {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.overview-card p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.58;
+}
+
 .build-steps {
   margin-top: 72px;
   border-top: 1px solid var(--line);
@@ -257,7 +361,7 @@ h1 {
 }
 
 .expansion-step {
-  margin-top: 64px;
+  margin-top: 20px;
   padding: 40px;
   background: var(--surface);
   border: 1px solid #d9dde1;
@@ -404,6 +508,20 @@ h1 {
     padding-top: 24px;
   }
 
+  .process-overview {
+    grid-template-columns: 1fr;
+    margin-top: 42px;
+  }
+
+  .overview-visual {
+    height: 180px;
+    padding: 20px;
+  }
+
+  .overview-card-copy {
+    padding: 22px;
+  }
+
   .build-steps {
     margin-top: 48px;
   }
@@ -424,7 +542,7 @@ h1 {
   }
 
   .expansion-step {
-    margin-top: 48px;
+    margin-top: 20px;
     padding: 22px;
   }
 
