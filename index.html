@@ -148,8 +148,8 @@
               <p>
                 Once the first solution proves its value, we expand it across
                 additional workflows, tools, and information into one evolving
-                system that removes more operational overhead, speeds up
-                execution, and reduces manual coordination.
+                system purpose built to remove operational overhead, speed up
+                execution, and reduce manual coordination.
               </p>
             </div>
 
@@ -318,6 +318,9 @@
 
       if (useCasesViewport && caseStudiesProgress) {
         let progressFrame = 0;
+        let directionLockTimer = 0;
+        let verticalGestureLocked = false;
+        let lockedScrollLeft = 0;
 
         const updateCaseStudyProgress = () => {
           progressFrame = 0;
@@ -340,6 +343,32 @@
           }
         };
 
+        useCasesViewport.addEventListener(
+          "wheel",
+          (event) => {
+            const isHorizontalIntent =
+              event.shiftKey ||
+              Math.abs(event.deltaX) > Math.abs(event.deltaY) * 1.35;
+
+            if (isHorizontalIntent) {
+              verticalGestureLocked = false;
+              clearTimeout(directionLockTimer);
+              return;
+            }
+
+            if (!verticalGestureLocked) {
+              lockedScrollLeft = useCasesViewport.scrollLeft;
+            }
+
+            verticalGestureLocked = true;
+            clearTimeout(directionLockTimer);
+            directionLockTimer = setTimeout(() => {
+              verticalGestureLocked = false;
+            }, 100);
+          },
+          { passive: true },
+        );
+
         caseStudiesProgress.addEventListener("input", () => {
           const maxScroll =
             useCasesViewport.scrollWidth - useCasesViewport.clientWidth;
@@ -347,9 +376,21 @@
             maxScroll * (Number(caseStudiesProgress.value) / 100);
         });
 
-        useCasesViewport.addEventListener("scroll", requestProgressUpdate, {
-          passive: true,
-        });
+        useCasesViewport.addEventListener(
+          "scroll",
+          () => {
+            if (
+              verticalGestureLocked &&
+              Math.abs(useCasesViewport.scrollLeft - lockedScrollLeft) > 0.5
+            ) {
+              useCasesViewport.scrollLeft = lockedScrollLeft;
+              return;
+            }
+
+            requestProgressUpdate();
+          },
+          { passive: true },
+        );
         window.addEventListener("resize", requestProgressUpdate, {
           passive: true,
         });
