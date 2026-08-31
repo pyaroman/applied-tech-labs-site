@@ -1142,6 +1142,11 @@ h1 {
   white-space: nowrap;
 }
 
+.closing-cta-accent {
+  color: #afc0d2;
+  font-weight: 550;
+}
+
 .closing-cta p {
   max-width: 680px;
   margin: 0 auto 34px;
