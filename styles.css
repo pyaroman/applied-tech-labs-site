@@ -682,18 +682,18 @@ h1 {
 }
 
 .approach-item-category {
-  min-height: 28px;
+  min-height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
-  padding: 0 13px;
+  margin-bottom: 16px;
+  padding: 0 16px;
   background: var(--blue);
   border-radius: 999px;
   color: var(--white);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   line-height: 1;
 }
 
