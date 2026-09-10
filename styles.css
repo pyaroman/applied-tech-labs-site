@@ -299,94 +299,6 @@ h1 {
   color: var(--blue);
 }
 
-.founder-section {
-  position: relative;
-  z-index: 2;
-  padding-block: 68px 56px;
-  background: var(--white);
-}
-
-.founder-card {
-  width: min(1080px, calc(100% - 64px));
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 44px;
-  align-items: center;
-  margin: -68px auto 0;
-  padding: 32px;
-  background: var(--white);
-  border: 1px solid rgba(217, 221, 225, 0.75);
-  border-radius: 20px;
-  box-shadow:
-    0 42px 90px -30px rgba(32, 36, 43, 0.32),
-    0 16px 36px rgba(32, 36, 43, 0.1);
-}
-
-.founder-label {
-  width: fit-content;
-  margin-bottom: 14px;
-  padding: 6px 10px;
-  border: 1px solid #aeb7c0;
-  color: var(--blue);
-  font-size: 11px;
-  font-weight: 650;
-  letter-spacing: 0.12em;
-  line-height: 1;
-}
-
-.founder-copy h2 {
-  max-width: none;
-  margin-bottom: 16px;
-  font-size: clamp(18px, 2.1vw, 25px);
-  font-weight: 430;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  white-space: nowrap;
-}
-
-.founder-copy > p:not(.founder-label) {
-  max-width: 680px;
-  margin-bottom: 10px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.55;
-}
-
-.founder-copy > p:last-child {
-  margin-bottom: 0;
-}
-
-.founder-portrait {
-  margin-bottom: 0;
-}
-
-.founder-portrait img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border: 1px solid #d9dde1;
-  border-radius: 14px;
-}
-
-.founder-portrait figcaption {
-  display: grid;
-  gap: 2px;
-  padding-top: 10px;
-}
-
-.founder-portrait strong {
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 650;
-}
-
-.founder-portrait span {
-  color: var(--muted);
-  font-size: 12px;
-}
-
 .build-section {
   padding-block: 72px 80px;
   border-top: 1px solid var(--line);
@@ -1261,14 +1173,6 @@ h1 {
     align-items: center;
   }
 
-  .founder-card {
-    width: min(100% - 48px, 1080px);
-    grid-template-columns: minmax(0, 1fr) 200px;
-    gap: 32px;
-    margin-top: -56px;
-    padding: 30px;
-  }
-
   .expansion-step {
     padding: 24px;
   }
@@ -1360,36 +1264,6 @@ h1 {
     display: grid;
     gap: 9px;
     margin-top: 18px;
-  }
-
-  .founder-section {
-    padding-block: 40px 44px;
-  }
-
-  .founder-card {
-    width: calc(100% - 40px);
-    grid-template-columns: 1fr;
-    gap: 24px;
-    margin-top: -32px;
-    padding: 22px;
-    border-radius: 16px;
-  }
-
-  .founder-portrait img {
-    border-radius: 12px;
-  }
-
-  .founder-copy h2 {
-    font-size: clamp(29px, 8vw, 36px);
-    white-space: normal;
-  }
-
-  .founder-copy > p:not(.founder-label) {
-    font-size: 14px;
-  }
-
-  .founder-portrait {
-    max-width: 220px;
   }
 
   .build-section {
