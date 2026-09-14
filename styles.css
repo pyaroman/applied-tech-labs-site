@@ -238,6 +238,11 @@ h1 {
   line-height: 1.52;
 }
 
+.hero-copy > p:first-child strong {
+  color: var(--blue);
+  font-weight: 800;
+}
+
 .hero-proof-points {
   display: flex;
   flex-wrap: wrap;
