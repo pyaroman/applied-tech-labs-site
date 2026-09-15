@@ -575,87 +575,151 @@ h1 {
 }
 
 .problem-catalog {
-  margin-top: 56px;
-  border-bottom: 1px solid #cfd4d9;
-}
-
-.problem-group {
-  padding-block: 24px 26px;
-  border-top: 1px solid #cfd4d9;
-}
-
-.problem-group-heading {
   display: grid;
-  grid-template-columns: 48px minmax(250px, 0.8fr) minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  margin-bottom: 16px;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.problem-card {
+  min-width: 0;
+  padding: 32px 32px 0;
+  background: var(--white);
+  border: 1px solid #d4dfe7;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px -12px rgba(32, 36, 43, 0.18);
+}
+
+.problem-card-category {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .problem-number {
-  padding-top: 5px;
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  display: inline-flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  background: #edf2f6;
+  border-radius: 50%;
+  font-size: 11px;
+  letter-spacing: 0.04em;
 }
 
-.problem-group-heading h3,
-.problem-group-heading p {
-  margin: 0;
-}
-
-.problem-group-heading h3 {
-  font-size: 27px;
-  font-weight: 520;
-  line-height: 1.15;
+.problem-card-heading h3 {
+  max-width: 24ch;
+  min-height: 2.36em;
+  margin-bottom: 16px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.18;
   letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 
-.problem-group-heading p {
+.problem-card-description {
+  min-height: 4.8em;
+  margin-bottom: 26px;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.problem-paths {
-  margin: 0 0 0 78px;
-  padding: 0;
-  border-top: 1px solid var(--line);
+.problem-details {
+  border-top: 1px solid #e2e8ed;
+}
+
+.problem-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 70px;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+
+.problem-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.problem-details summary:hover {
+  color: var(--ink);
+}
+
+.problem-details summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+.problem-toggle {
+  position: relative;
+  flex: 0 0 28px;
+  height: 28px;
+  border: 1px solid #cdd8e1;
+  border-radius: 50%;
+}
+
+.problem-toggle::before,
+.problem-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 1px;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.problem-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.problem-details[open] .problem-toggle::after {
+  display: none;
+}
+
+.problem-examples {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 12px 0 30px;
   list-style: none;
 }
 
-.problem-paths li {
-  display: grid;
-  grid-template-columns: minmax(210px, 0.85fr) 28px minmax(0, 1.15fr);
-  gap: 18px;
-  align-items: start;
-  padding-block: 12px;
-  border-bottom: 1px solid var(--line);
+.problem-examples li {
+  padding-left: 16px;
+  border-left: 2px solid #d4dfe7;
 }
 
-.problem-paths li:last-child {
-  border-bottom: 0;
-}
-
-.problem-statement {
+.problem-examples h4 {
+  margin: 0 0 8px;
   color: var(--ink);
-  font-size: 14px;
-  font-weight: 650;
-  line-height: 1.48;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
-.problem-arrow {
-  color: var(--blue);
-  font-size: 17px;
-  line-height: 1.25;
-  text-align: center;
-}
-
-.problem-outcome {
+.problem-examples p {
+  margin: 0;
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.52;
+  line-height: 1.65;
 }
 
 .why-us-section {
@@ -1211,13 +1275,21 @@ h1 {
     padding: 14px;
   }
 
-  .problem-group-heading {
-    grid-template-columns: 40px minmax(210px, 0.85fr) minmax(0, 1fr);
-    gap: 20px;
+  .problem-catalog {
+    gap: 18px;
   }
 
-  .problem-paths {
-    margin-left: 60px;
+  .problem-card {
+    padding: 26px 24px 0;
+  }
+
+  .problem-card-heading h3 {
+    min-height: 3.54em;
+    font-size: 26px;
+  }
+
+  .problem-card-description {
+    min-height: 6.4em;
   }
 
   .use-cases-track {
@@ -1373,46 +1445,33 @@ h1 {
   }
 
   .problem-catalog {
-    margin-top: 40px;
-  }
-
-  .problem-group {
-    padding-block: 22px 24px;
-  }
-
-  .problem-group-heading {
-    grid-template-columns: 34px minmax(0, 1fr);
-    gap: 8px 14px;
-    margin-bottom: 16px;
-  }
-
-  .problem-number {
-    padding-top: 4px;
-  }
-
-  .problem-group-heading h3 {
-    font-size: 25px;
-  }
-
-  .problem-group-heading p {
-    grid-column: 2;
-    font-size: 14px;
-  }
-
-  .problem-paths {
-    margin-left: 0;
-  }
-
-  .problem-paths li {
     grid-template-columns: 1fr;
-    gap: 7px;
-    padding-block: 12px;
+    gap: 16px;
+    margin-top: 32px;
   }
 
-  .problem-arrow {
-    transform: rotate(90deg);
-    transform-origin: center;
-    text-align: left;
+  .problem-card {
+    padding: 24px 22px 0;
+    border-radius: 14px;
+  }
+
+  .problem-card-category {
+    margin-bottom: 18px;
+  }
+
+  .problem-card-heading h3 {
+    min-height: 0;
+    margin-bottom: 14px;
+    font-size: 27px;
+  }
+
+  .problem-card-description {
+    min-height: 0;
+    margin-bottom: 22px;
+  }
+
+  .problem-details summary {
+    min-height: 64px;
   }
 
   .why-us-section {
