@@ -178,6 +178,7 @@ nav a:hover {
 }
 
 #build,
+#problems,
 #approach,
 #why-us,
 #case-studies,
@@ -288,7 +289,7 @@ h1 {
   font-size: 14px;
 }
 
-.hero-client-link {
+.hero-secondary-link {
   padding-bottom: 3px;
   border-bottom: 1px solid #9da4ab;
   color: #747b84;
@@ -299,7 +300,7 @@ h1 {
     color 150ms ease;
 }
 
-.hero-client-link:hover {
+.hero-secondary-link:hover {
   border-color: var(--blue);
   color: var(--blue);
 }
@@ -535,6 +536,127 @@ h1 {
   background: var(--white);
   border: 1px solid #d9dde1;
   border-radius: 12px;
+}
+
+.problems-section {
+  padding-block: 80px 88px;
+  background: #fafbfc;
+  border-top: 1px solid var(--line);
+}
+
+.problems-intro {
+  max-width: 880px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.problems-eyebrow {
+  margin-bottom: 16px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.problems-intro h2 {
+  margin-bottom: 22px;
+  font-size: clamp(44px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.problems-intro > p:last-child {
+  max-width: 740px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.62;
+}
+
+.problem-catalog {
+  margin-top: 56px;
+  border-bottom: 1px solid #cfd4d9;
+}
+
+.problem-group {
+  padding-block: 34px 38px;
+  border-top: 1px solid #cfd4d9;
+}
+
+.problem-group-heading {
+  display: grid;
+  grid-template-columns: 48px minmax(250px, 0.8fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 26px;
+}
+
+.problem-number {
+  padding-top: 5px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.problem-group-heading h3,
+.problem-group-heading p {
+  margin: 0;
+}
+
+.problem-group-heading h3 {
+  font-size: 29px;
+  font-weight: 520;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.problem-group-heading p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.58;
+}
+
+.problem-paths {
+  margin: 0 0 0 78px;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.problem-paths li {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.85fr) 28px minmax(0, 1.15fr);
+  gap: 18px;
+  align-items: start;
+  padding-block: 17px;
+  border-bottom: 1px solid var(--line);
+}
+
+.problem-paths li:last-child {
+  border-bottom: 0;
+}
+
+.problem-statement {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.48;
+}
+
+.problem-arrow {
+  color: var(--blue);
+  font-size: 17px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.problem-outcome {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.52;
 }
 
 .approach-section {
@@ -1182,6 +1304,15 @@ h1 {
     padding: 24px;
   }
 
+  .problem-group-heading {
+    grid-template-columns: 40px minmax(210px, 0.85fr) minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .problem-paths {
+    margin-left: 60px;
+  }
+
   .use-cases-track {
     grid-auto-columns: calc(100% / 2.25);
   }
@@ -1320,6 +1451,61 @@ h1 {
 
   .system-visual {
     margin-top: 16px;
+  }
+
+  .problems-section {
+    padding-block: 56px 60px;
+  }
+
+  .problems-intro h2 {
+    font-size: clamp(39px, 11vw, 50px);
+  }
+
+  .problems-intro > p:last-child {
+    font-size: 16px;
+  }
+
+  .problem-catalog {
+    margin-top: 40px;
+  }
+
+  .problem-group {
+    padding-block: 28px 30px;
+  }
+
+  .problem-group-heading {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 8px 14px;
+    margin-bottom: 22px;
+  }
+
+  .problem-number {
+    padding-top: 4px;
+  }
+
+  .problem-group-heading h3 {
+    font-size: 25px;
+  }
+
+  .problem-group-heading p {
+    grid-column: 2;
+    font-size: 14px;
+  }
+
+  .problem-paths {
+    margin-left: 0;
+  }
+
+  .problem-paths li {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding-block: 15px;
+  }
+
+  .problem-arrow {
+    transform: rotate(90deg);
+    transform-origin: center;
+    text-align: left;
   }
 
   .approach-section {
