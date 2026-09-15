@@ -539,7 +539,7 @@ h1 {
 }
 
 .problems-section {
-  padding-block: 56px 64px;
+  padding-block: 80px 88px;
   background: #fafbfc;
   border-top: 1px solid var(--line);
 }
@@ -551,7 +551,7 @@ h1 {
 }
 
 .problems-eyebrow {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   color: var(--blue);
   font-size: 12px;
   font-weight: 700;
@@ -560,8 +560,8 @@ h1 {
 }
 
 .problems-intro h2 {
-  margin-bottom: 14px;
-  font-size: clamp(42px, 4.5vw, 56px);
+  margin-bottom: 22px;
+  font-size: clamp(44px, 5vw, 62px);
   font-weight: 400;
   line-height: 1.04;
   letter-spacing: -0.045em;
@@ -572,11 +572,11 @@ h1 {
   margin: 0 auto;
   color: var(--muted);
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 1.62;
 }
 
 .problem-catalog {
-  margin-top: 34px;
+  margin-top: 56px;
   border-bottom: 1px solid #cfd4d9;
 }
 
@@ -1454,7 +1454,7 @@ h1 {
   }
 
   .problems-section {
-    padding-block: 44px 48px;
+    padding-block: 56px 60px;
   }
 
   .problems-intro h2 {
@@ -1466,7 +1466,7 @@ h1 {
   }
 
   .problem-catalog {
-    margin-top: 28px;
+    margin-top: 40px;
   }
 
   .problem-group {
