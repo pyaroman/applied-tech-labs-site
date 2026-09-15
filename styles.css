@@ -487,8 +487,8 @@ h1 {
 
 .expansion-step {
   max-width: 1040px;
-  margin: 28px auto 0;
-  padding: 22px;
+  margin: 24px auto 0;
+  padding: 18px;
   background: var(--white);
   border: 1px solid rgba(217, 221, 225, 0.8);
   border-radius: 16px;
@@ -517,7 +517,7 @@ h1 {
 
 .expansion-copy p {
   max-width: 720px;
-  margin: 7px auto 0;
+  margin: 5px auto 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.58;
@@ -525,7 +525,7 @@ h1 {
 
 .system-visual {
   max-width: 840px;
-  margin: 14px auto 0;
+  margin: 10px auto 0;
 }
 
 .system-visual img {
@@ -1301,7 +1301,7 @@ h1 {
   }
 
   .expansion-step {
-    padding: 24px;
+    padding: 18px;
   }
 
   .problem-group-heading {
@@ -1437,7 +1437,7 @@ h1 {
 
   .expansion-step {
     margin-top: 16px;
-    padding: 18px;
+    padding: 16px;
     border-radius: 16px;
   }
 
@@ -1450,7 +1450,7 @@ h1 {
   }
 
   .system-visual {
-    margin-top: 16px;
+    margin-top: 12px;
   }
 
   .problems-section {
