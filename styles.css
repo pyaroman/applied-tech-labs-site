@@ -354,7 +354,7 @@ h1 {
 
 .process-overview {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   margin-top: 40px;
 }
@@ -409,12 +409,12 @@ h1 {
 
 .overview-card-copy {
   display: block;
-  padding: 22px 24px;
-  text-align: center;
+  padding: 26px 24px 30px;
+  text-align: left;
 }
 
 .overview-number,
-.step-number {
+.expansion-label {
   min-height: 26px;
   display: inline-flex;
   align-items: center;
@@ -446,42 +446,10 @@ h1 {
 
 .overview-card p {
   max-width: 440px;
-  margin: 12px auto 0;
+  margin: 14px 0 0;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.58;
-}
-
-.overview-details {
-  width: min(100%, 280px);
-  display: grid;
-  gap: 8px;
-  margin: 18px auto 0;
-  padding: 16px 0 0;
-  border-top: 1px solid var(--line);
-  list-style: none;
-  text-align: left;
-}
-
-.overview-details li {
-  position: relative;
-  padding-left: 18px;
-  color: #555c65;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-}
-
-.overview-details li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.58em;
-  width: 6px;
-  height: 6px;
-  transform: translateY(-50%);
-  background: #eef2f5;
-  border: 1px solid var(--blue);
 }
 
 .expansion-copy h3,
@@ -489,7 +457,7 @@ h1 {
   margin-bottom: 0;
 }
 
-.expansion-step {
+.expansion-card {
   max-width: 1040px;
   margin: 20px auto 0;
   padding: 14px;
@@ -506,7 +474,7 @@ h1 {
   text-align: center;
 }
 
-.expansion-copy .step-number {
+.expansion-copy .expansion-label {
   display: inline-flex;
   margin: 0 auto 10px;
 }
@@ -1276,7 +1244,22 @@ h1 {
     align-items: center;
   }
 
-  .expansion-step {
+  .process-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-card {
+    grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+    grid-template-rows: auto;
+  }
+
+  .overview-visual {
+    height: auto;
+    border-right: 1px solid #d9dde1;
+    border-bottom: 0;
+  }
+
+  .expansion-card {
     padding: 14px;
   }
 
@@ -1407,19 +1390,23 @@ h1 {
   }
 
   .overview-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     border-radius: 14px;
   }
 
   .overview-visual {
     height: 160px;
     padding: 20px;
+    border-right: 0;
+    border-bottom: 1px solid #d9dde1;
   }
 
   .overview-card-copy {
     padding: 20px;
   }
 
-  .expansion-step {
+  .expansion-card {
     margin-top: 14px;
     padding: 14px;
     border-radius: 16px;
