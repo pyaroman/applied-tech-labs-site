@@ -201,6 +201,11 @@ nav a:hover {
   text-transform: uppercase;
 }
 
+.hero-kicker {
+  font-weight: 700;
+  text-transform: none;
+}
+
 h1 {
   max-width: 1060px;
   margin-bottom: 42px;
