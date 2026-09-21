@@ -545,7 +545,7 @@ h1 {
   gap: 20px;
   max-width: 740px;
   margin: 30px auto 0;
-  text-align: left;
+  text-align: center;
 }
 
 .first-build-copy p {
@@ -561,6 +561,7 @@ h1 {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.4;
+  text-align: center;
 }
 
 .problem-catalog {
