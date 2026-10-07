@@ -459,7 +459,7 @@ h1 {
 }
 
 .expansion-card {
-  max-width: 1040px;
+  max-width: 820px;
   margin: 20px auto 0;
   padding: 14px;
   background: var(--white);
@@ -497,15 +497,14 @@ h1 {
 }
 
 .system-visual {
-  max-width: 820px;
+  max-width: 600px;
   margin: 8px auto 0;
 }
 
 .system-visual img {
   width: 100%;
+  height: auto;
   display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
   background: var(--white);
   border: 1px solid #d9dde1;
   border-radius: 12px;
