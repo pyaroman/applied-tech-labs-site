@@ -543,6 +543,33 @@ h1 {
   font-size: 11px;
 }
 
+.outcome-card {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 12px;
+  padding: 16px;
+  min-height: 0;
+}
+
+.outcome-card .expansion-label {
+  margin-bottom: 0;
+}
+
+.outcome-card .system-visual {
+  position: relative;
+  max-width: none;
+  min-height: 0;
+  height: 100%;
+}
+
+.outcome-card .system-visual img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: contain;
+  border: 0;
+}
+
 .first-build-section {
   padding-block: 80px 88px;
   background: #e8eef3;
@@ -1311,6 +1338,11 @@ h1 {
 
   .expansion-card {
     padding: 14px;
+  }
+
+  .outcome-card .system-visual {
+    height: auto;
+    aspect-ratio: 1672 / 941;
   }
 
   .problem-catalog {
