@@ -787,31 +787,32 @@ h1 {
 
 .operations-comparison {
   width: 100%;
-  margin-top: 54px;
+  max-width: 940px;
+  margin: 38px auto 0;
   border-collapse: collapse;
   table-layout: fixed;
   text-align: left;
 }
 
 .operations-comparison th {
-  padding: 0 28px 18px 0;
+  padding: 0 20px 14px 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   vertical-align: bottom;
 }
 
 .operations-comparison td {
-  padding: 25px 28px 25px 0;
+  padding: 18px 20px 18px 0;
   border-block: 1px solid var(--line);
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.45;
   vertical-align: middle;
 }
 
 .operations-comparison th:last-child,
 .operations-comparison td:last-child {
-  padding-left: 24px;
+  padding-left: 20px;
   padding-right: 0;
 }
 
@@ -822,12 +823,12 @@ h1 {
 .comparison-after {
   display: flex;
   align-items: baseline;
-  gap: 14px;
+  gap: 10px;
   color: var(--ink);
 }
 
 .comparison-check {
-  flex: 0 0 20px;
+  flex: 0 0 16px;
   color: var(--blue);
   font-weight: 600;
 }
@@ -1407,7 +1408,7 @@ h1 {
   }
 
   .operations-comparison {
-    margin-top: 34px;
+    margin-top: 28px;
   }
 
   .operations-comparison th {
@@ -1416,7 +1417,7 @@ h1 {
   }
 
   .operations-comparison td {
-    padding: 20px 12px 20px 0;
+    padding: 15px 12px 15px 0;
     font-size: 15px;
     line-height: 1.5;
   }
