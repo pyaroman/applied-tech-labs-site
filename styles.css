@@ -764,7 +764,9 @@ h1 {
 
 .why-us-intro {
   max-width: 880px;
-  text-align: left;
+  margin-inline: auto;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .why-us-intro h2 {
@@ -777,7 +779,7 @@ h1 {
 
 .why-us-intro p {
   max-width: 760px;
-  margin: 0;
+  margin: 0 auto;
   color: var(--muted);
   font-size: 17px;
   line-height: 1.62;
