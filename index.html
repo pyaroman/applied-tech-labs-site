@@ -9,8 +9,9 @@
     />
     <title>Applied Tech Labs</title>
     <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
-    <link rel="stylesheet" href="styles.css?v=75" />
+    <link rel="stylesheet" href="styles.css?v=76" />
     <script src="examples.js?v=3" defer></script>
+    <script src="logo-marquee.js?v=1" defer></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </head>
   <body>
@@ -58,6 +59,29 @@
               onclick="if (window.Calendly) { Calendly.initPopupWidget({ url: this.href }); return false; }"
             >Book a Free Call</a>
             <a class="hero-secondary-link" href="#first-build">Explore our Examples</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="companies-section" aria-labelledby="companies-title">
+        <div class="companies-heading">
+          <h2 id="companies-title">Companies we've worked with</h2>
+          <button class="companies-pause" type="button" aria-label="Pause logo animation" aria-pressed="false" hidden>
+            <span aria-hidden="true">Ⅱ</span>
+          </button>
+        </div>
+        <div class="companies-marquee">
+          <div class="companies-track">
+            <div class="companies-group">
+              <div class="company-logo company-logo-spinedao"><img src="assets/logos/spinedao.jpg" alt="SpineDAO" width="1500" height="500" /></div>
+              <div class="company-logo"><img src="assets/logos/deeplook-medical.png" alt="deeplook Medical" width="700" height="181" /></div>
+              <div class="company-logo company-logo-asu"><img src="assets/logos/asu-health-observatory.webp" alt="ASU Health Observatory, Arizona State University" width="360" height="158" /></div>
+            </div>
+            <div class="companies-group" aria-hidden="true">
+              <div class="company-logo company-logo-spinedao"><img src="assets/logos/spinedao.jpg" alt="SpineDAO" width="1500" height="500" /></div>
+              <div class="company-logo"><img src="assets/logos/deeplook-medical.png" alt="deeplook Medical" width="700" height="181" /></div>
+              <div class="company-logo company-logo-asu"><img src="assets/logos/asu-health-observatory.webp" alt="ASU Health Observatory, Arizona State University" width="360" height="158" /></div>
+            </div>
           </div>
         </div>
       </section>
