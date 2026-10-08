@@ -1066,13 +1066,15 @@ h1 {
   margin: 0 auto 42px;
   color: var(--white);
   font-size: clamp(48px, 4.5vw, 64px);
-  font-weight: 400;
+  font-weight: 550;
   line-height: 1.04;
   letter-spacing: -0.05em;
-  white-space: nowrap;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 .closing-cta-accent {
+  display: block;
   color: #afc0d2;
   font-weight: 550;
 }
