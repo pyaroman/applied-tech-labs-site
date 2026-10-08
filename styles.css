@@ -755,93 +755,6 @@ h1 {
   line-height: 1.6;
 }
 
-.problem-details {
-  border-top: 1px solid #e2e8ed;
-}
-
-.problem-details summary {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 16px;
-  min-height: 70px;
-  color: var(--blue);
-  font-size: 14px;
-  font-weight: 600;
-  list-style: none;
-  cursor: pointer;
-}
-
-.problem-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.problem-details summary:hover {
-  color: var(--ink);
-}
-
-.problem-details summary:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: -2px;
-  border-radius: 4px;
-}
-
-.problem-toggle {
-  position: relative;
-  flex: 0 0 28px;
-  height: 28px;
-  border: 1px solid #cdd8e1;
-  border-radius: 50%;
-}
-
-.problem-toggle::before,
-.problem-toggle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 1px;
-  background: currentColor;
-  transform: translate(-50%, -50%);
-}
-
-.problem-toggle::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.problem-details[open] .problem-toggle::after {
-  display: none;
-}
-
-.problem-examples {
-  display: grid;
-  gap: 22px;
-  margin: 0;
-  padding: 12px 0 30px;
-  list-style: none;
-}
-
-.problem-examples li {
-  padding-left: 16px;
-  border-left: 2px solid #d4dfe7;
-}
-
-.problem-examples h4 {
-  margin: 0 0 8px;
-  color: var(--ink);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-.problem-examples p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.65;
-}
-
 .why-us-section {
   padding-block: 72px 80px;
   background: var(--surface);
@@ -1621,10 +1534,6 @@ h1 {
   .problem-card-description {
     min-height: 8em;
     margin-bottom: 22px;
-  }
-
-  .problem-details summary {
-    min-height: 64px;
   }
 
   .why-us-section {

@@ -26,22 +26,7 @@ if (carousel) {
     });
   });
 
-  function closeOffscreenDetails() {
-    const viewport = track.getBoundingClientRect();
-    cards.forEach((card) => {
-      const bounds = card.getBoundingClientRect();
-      if (bounds.right <= viewport.left + 1 || bounds.left >= viewport.right - 1) {
-        card.querySelector('details').open = false;
-      }
-    });
-  }
-
-  let scrollTimer;
-  track.addEventListener('scroll', () => {
-    syncPosition();
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(closeOffscreenDetails, 150);
-  }, { passive: true });
+  track.addEventListener('scroll', syncPosition, { passive: true });
   new ResizeObserver(syncPosition).observe(track);
   carousel.setAttribute('data-enhanced', '');
   syncPosition();
