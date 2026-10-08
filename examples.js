@@ -26,8 +26,7 @@ if (carousel) {
     });
   });
 
-  track.addEventListener('scroll', syncPosition, { passive: true });
-  track.addEventListener('scrollend', () => {
+  function closeOffscreenDetails() {
     const viewport = track.getBoundingClientRect();
     cards.forEach((card) => {
       const bounds = card.getBoundingClientRect();
@@ -35,7 +34,14 @@ if (carousel) {
         card.querySelector('details').open = false;
       }
     });
-  });
+  }
+
+  let scrollTimer;
+  track.addEventListener('scroll', () => {
+    syncPosition();
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(closeOffscreenDetails, 150);
+  }, { passive: true });
   new ResizeObserver(syncPosition).observe(track);
   carousel.setAttribute('data-enhanced', '');
   syncPosition();
