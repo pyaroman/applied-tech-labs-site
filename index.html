@@ -9,7 +9,8 @@
     />
     <title>Applied Tech Labs</title>
     <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
-    <link rel="stylesheet" href="styles.css?v=69" />
+    <link rel="stylesheet" href="styles.css?v=70" />
+    <script src="examples.js?v=1" defer></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </head>
   <body>
@@ -254,130 +255,135 @@
           </div>
 
           <p class="first-build-leadin"><strong>Examples of where we typically start:</strong></p>
-          <div class="problem-catalog">
-            <article class="problem-card" aria-labelledby="problem-1-title">
-              <div class="problem-card-heading">
-                <p class="problem-card-category">
-                  <span class="problem-number" aria-hidden="true">01</span>
-                  Team capacity
-                </p>
-                <h3 id="problem-1-title">Capacity is stuck in manual work</h3>
-                <p class="problem-card-description">Reporting, quoting, and document handling still heavily depend on manual coordination, so the team can only take on more volume by working longer.</p>
-              </div>
-              <details class="problem-details">
-                <summary>
-                  <span>Explore examples</span>
-                  <span class="problem-toggle" aria-hidden="true"></span>
-                </summary>
-                <ul class="problem-examples">
-                  <li>
-                    <h4>Reporting consumes hours every week</h4>
-                    <p>Data is collected, metrics are calculated, and the recurring report is drafted automatically for review.</p>
-                  </li>
-                  <li>
-                    <h4>Quotes take too long to prepare</h4>
-                    <p>Specifications, past work, and approved pricing are assembled into an estimate the team can review and send.</p>
-                  </li>
-                  <li>
-                    <h4>Manual document processing creates backlogs</h4>
-                    <p>Information is extracted, checked against your rules, and only the exceptions are flagged for a person.</p>
-                  </li>
-                </ul>
-              </details>
-            </article>
+          <div class="examples-carousel">
+            <div class="problem-catalog" id="examples-track" role="region" aria-label="Business examples" tabindex="0">
+              <article class="problem-card" aria-labelledby="problem-1-title">
+                <div class="problem-card-heading">
+                  <p class="problem-card-category">
+                    <span class="problem-number" aria-hidden="true">01</span>
+                    Team capacity
+                  </p>
+                  <h3 id="problem-1-title">Capacity is stuck in manual work</h3>
+                  <p class="problem-card-description">Reporting, quoting, and document handling still heavily depend on manual coordination, so the team can only take on more volume by working longer.</p>
+                </div>
+                <details class="problem-details">
+                  <summary>
+                    <span>Explore examples</span>
+                    <span class="problem-toggle" aria-hidden="true"></span>
+                  </summary>
+                  <ul class="problem-examples">
+                    <li>
+                      <h4>Reporting consumes hours every week</h4>
+                      <p>Data is collected, metrics are calculated, and the recurring report is drafted automatically for review.</p>
+                    </li>
+                    <li>
+                      <h4>Quotes take too long to prepare</h4>
+                      <p>Specifications, past work, and approved pricing are assembled into an estimate the team can review and send.</p>
+                    </li>
+                    <li>
+                      <h4>Manual document processing creates backlogs</h4>
+                      <p>Information is extracted, checked against your rules, and only the exceptions are flagged for a person.</p>
+                    </li>
+                  </ul>
+                </details>
+              </article>
 
-            <article class="problem-card" aria-labelledby="problem-2-title">
-              <div class="problem-card-heading">
-                <p class="problem-card-category">
-                  <span class="problem-number" aria-hidden="true">02</span>
-                  Connected systems
-                </p>
-                <h3 id="problem-2-title">Software, data, and people don’t connect</h3>
-                <p class="problem-card-description">Separate systems, scattered knowledge, and conflicting numbers slow communication, create avoidable errors, and stall work between departments.</p>
-              </div>
-              <details class="problem-details">
-                <summary>
-                  <span>Explore examples</span>
-                  <span class="problem-toggle" aria-hidden="true"></span>
-                </summary>
-                <ul class="problem-examples">
-                  <li>
-                    <h4>Departments work from conflicting numbers</h4>
-                    <p>Source systems are connected and definitions are standardized so the company uses one shared view.</p>
-                  </li>
-                  <li>
-                    <h4>Answers live across tools and a few people</h4>
-                    <p>Employees can query company data and process knowledge through an AI chat interface.</p>
-                  </li>
-                  <li>
-                    <h4>Work stalls between teams</h4>
-                    <p>Handoffs move automatically across the systems you already use instead of through inboxes and constant meetings.</p>
-                  </li>
-                </ul>
-              </details>
-            </article>
+              <article class="problem-card" aria-labelledby="problem-2-title">
+                <div class="problem-card-heading">
+                  <p class="problem-card-category">
+                    <span class="problem-number" aria-hidden="true">02</span>
+                    Connected systems
+                  </p>
+                  <h3 id="problem-2-title">Software, data, and people don’t connect</h3>
+                  <p class="problem-card-description">Separate systems, scattered knowledge, and conflicting numbers slow communication, create avoidable errors, and stall work between departments.</p>
+                </div>
+                <details class="problem-details">
+                  <summary>
+                    <span>Explore examples</span>
+                    <span class="problem-toggle" aria-hidden="true"></span>
+                  </summary>
+                  <ul class="problem-examples">
+                    <li>
+                      <h4>Departments work from conflicting numbers</h4>
+                      <p>Source systems are connected and definitions are standardized so the company uses one shared view.</p>
+                    </li>
+                    <li>
+                      <h4>Answers live across tools and a few people</h4>
+                      <p>Employees can query company data and process knowledge through an AI chat interface.</p>
+                    </li>
+                    <li>
+                      <h4>Work stalls between teams</h4>
+                      <p>Handoffs move automatically across the systems you already use instead of through inboxes and constant meetings.</p>
+                    </li>
+                  </ul>
+                </details>
+              </article>
 
-            <article class="problem-card" aria-labelledby="problem-3-title">
-              <div class="problem-card-heading">
-                <p class="problem-card-category">
-                  <span class="problem-number" aria-hidden="true">03</span>
-                  Decisions &amp; impact
-                </p>
-                <h3 id="problem-3-title">Existing data isn’t tied to impact</h3>
-                <p class="problem-card-description">You collected the data, but it only matters once a specific person can use one clear number to change a call, a price, or a renewal.</p>
-              </div>
-              <details class="problem-details">
-                <summary>
-                  <span>Explore examples</span>
-                  <span class="problem-toggle" aria-hidden="true"></span>
-                </summary>
-                <ul class="problem-examples">
-                  <li>
-                    <h4>Backlogs and delays surface after the miss</h4>
-                    <p>Emerging bottlenecks are forecast early enough to protect commitments.</p>
-                  </li>
-                  <li>
-                    <h4>Pricing, retention, and product decisions rely on gut feeling</h4>
-                    <p>Product adoption, value, and usage metrics guide decision-making.</p>
-                  </li>
-                  <li>
-                    <h4>The value you create for customers stays invisible</h4>
-                    <p>Impact is measured in real-time as the product is used and put in front of the customer.</p>
-                  </li>
-                </ul>
-              </details>
-            </article>
+              <article class="problem-card" aria-labelledby="problem-3-title">
+                <div class="problem-card-heading">
+                  <p class="problem-card-category">
+                    <span class="problem-number" aria-hidden="true">03</span>
+                    Decisions &amp; impact
+                  </p>
+                  <h3 id="problem-3-title">Existing data isn’t tied to impact</h3>
+                  <p class="problem-card-description">You collected the data, but it only matters once a specific person can use one clear number to change a call, a price, or a renewal.</p>
+                </div>
+                <details class="problem-details">
+                  <summary>
+                    <span>Explore examples</span>
+                    <span class="problem-toggle" aria-hidden="true"></span>
+                  </summary>
+                  <ul class="problem-examples">
+                    <li>
+                      <h4>Backlogs and delays surface after the miss</h4>
+                      <p>Emerging bottlenecks are forecast early enough to protect commitments.</p>
+                    </li>
+                    <li>
+                      <h4>Pricing, retention, and product decisions rely on gut feeling</h4>
+                      <p>Product adoption, value, and usage metrics guide decision-making.</p>
+                    </li>
+                    <li>
+                      <h4>The value you create for customers stays invisible</h4>
+                      <p>Impact is measured in real-time as the product is used and put in front of the customer.</p>
+                    </li>
+                  </ul>
+                </details>
+              </article>
 
-            <article class="problem-card" aria-labelledby="problem-4-title">
-              <div class="problem-card-heading">
-                <p class="problem-card-category">
-                  <span class="problem-number" aria-hidden="true">04</span>
-                  Margin protection
-                </p>
-                <h3 id="problem-4-title">Errors keep taxing margin</h3>
-                <p class="problem-card-description">Pricing mistakes, wrong specifications, and bad invoices create recurring leakage that keeps affecting margin.</p>
-              </div>
-              <details class="problem-details">
-                <summary>
-                  <span>Explore examples</span>
-                  <span class="problem-toggle" aria-hidden="true"></span>
-                </summary>
-                <ul class="problem-examples">
-                  <li>
-                    <h4>Incorrect pricing goes out on a quote and erodes profit</h4>
-                    <p>Each quote is checked against current costs, price lists, and discount limits before it goes out.</p>
-                  </li>
-                  <li>
-                    <h4>Wrong quantities or specifications cause rework</h4>
-                    <p>Job details are validated against the approved requirements before work begins.</p>
-                  </li>
-                  <li>
-                    <h4>Duplicate or incorrect invoices slip through</h4>
-                    <p>Invoices are checked for duplicates and matched against purchasing and receiving before they are paid.</p>
-                  </li>
-                </ul>
-              </details>
-            </article>
+              <article class="problem-card" aria-labelledby="problem-4-title">
+                <div class="problem-card-heading">
+                  <p class="problem-card-category">
+                    <span class="problem-number" aria-hidden="true">04</span>
+                    Margin protection
+                  </p>
+                  <h3 id="problem-4-title">Errors keep taxing margin</h3>
+                  <p class="problem-card-description">Pricing mistakes, wrong specifications, and bad invoices create recurring leakage that keeps affecting margin.</p>
+                </div>
+                <details class="problem-details">
+                  <summary>
+                    <span>Explore examples</span>
+                    <span class="problem-toggle" aria-hidden="true"></span>
+                  </summary>
+                  <ul class="problem-examples">
+                    <li>
+                      <h4>Incorrect pricing goes out on a quote and erodes profit</h4>
+                      <p>Each quote is checked against current costs, price lists, and discount limits before it goes out.</p>
+                    </li>
+                    <li>
+                      <h4>Wrong quantities or specifications cause rework</h4>
+                      <p>Job details are validated against the approved requirements before work begins.</p>
+                    </li>
+                    <li>
+                      <h4>Duplicate or incorrect invoices slip through</h4>
+                      <p>Invoices are checked for duplicates and matched against purchasing and receiving before they are paid.</p>
+                    </li>
+                  </ul>
+                </details>
+              </article>
+            </div>
+            <div class="examples-scrollbar" hidden>
+              <input type="range" min="0" max="1" step="1" value="0" aria-label="Scroll through examples" aria-controls="examples-track" />
+            </div>
           </div>
         </div>
       </section>
